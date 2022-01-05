@@ -1,0 +1,50 @@
+uuid: 9e10043a-b725-44ee-8a91-a28c4560fa10
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.write_about_us.field_content
+    - field.field.paragraph.write_about_us.field_title
+    - paragraphs.paragraphs_type.write_about_us
+  module:
+    - paragraphs
+id: paragraph.write_about_us.default
+targetEntityType: paragraph
+bundle: write_about_us
+mode: default
+content:
+  field_content:
+    weight: 3
+    settings:
+      title: Image
+      title_plural: Images
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: linked_image
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: '0'
+    third_party_settings: {  }
+    type: paragraphs
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

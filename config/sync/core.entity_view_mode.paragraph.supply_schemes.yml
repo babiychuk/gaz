@@ -1,0 +1,10 @@
+uuid: 78dfa643-fef3-44b8-8c3b-bd4acef1c2c1
+langcode: uk
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.supply_schemes
+label: 'Supply schemes'
+targetEntityType: paragraph
+cache: true

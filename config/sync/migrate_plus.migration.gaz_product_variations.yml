@@ -1,0 +1,35 @@
+uuid: 31475912-9fd2-43fd-8285-e08ecf89d28f
+langcode: ru
+status: true
+dependencies: {  }
+id: gaz_product_variations
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: products
+migration_group: old_site
+label: 'Custom product variation migration'
+source:
+  plugin: gaz_migrate_product_variations
+  key: migrate
+process:
+  type:
+    plugin: default_value
+    default_value: default
+  status: published
+  sku: id
+  price/number:
+    -
+      plugin: default_value
+      default_value: 0
+      source: var_price
+    -
+      plugin: gaz_process_remove_tokens
+    -
+      plugin: gaz_process_filter_number
+  price/currency_code:
+    plugin: default_value
+    default_value: UAH
+destination:
+  plugin: 'entity:commerce_product_variation'
+migration_dependencies: null

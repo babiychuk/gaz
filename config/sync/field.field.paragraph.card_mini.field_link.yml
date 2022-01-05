@@ -1,0 +1,23 @@
+uuid: 5cc8eec2-8155-4017-ac87-4368b98c5e23
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.card_mini
+  module:
+    - link
+id: paragraph.card_mini.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: card_mini
+label: Ссылка
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

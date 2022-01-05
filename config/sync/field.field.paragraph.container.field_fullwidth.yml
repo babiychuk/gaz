@@ -1,0 +1,23 @@
+uuid: daf341e1-3e09-482b-bf4a-43c033ff57b8
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_fullwidth
+    - paragraphs.paragraphs_type.container
+id: paragraph.container.field_fullwidth
+field_name: field_fullwidth
+entity_type: paragraph
+bundle: container
+label: 'На всю ширину'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Да
+  off_label: Нет
+field_type: boolean

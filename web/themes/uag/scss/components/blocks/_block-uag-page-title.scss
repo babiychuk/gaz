@@ -1,0 +1,15 @@
+#block-uag-page-title {
+  @include fullWidth;
+
+  text-align: center;
+  background-color: rgba(#000, 0.2);
+
+  h1 {
+    @include container;
+    
+    font-size: 3em;
+    color: white;
+    text-transform: uppercase;
+    padding: 1em 0;
+  }
+}

@@ -1,0 +1,34 @@
+uuid: 50ac195a-d1ec-4bf3-8d5a-b8c213bd5930
+langcode: ru
+status: true
+dependencies:
+  config:
+    - facets.facet.category_price
+  module:
+    - facets
+    - uag_store
+  theme:
+    - uag
+id: category_price_facet
+theme: uag
+region: catalog_side
+weight: 0
+provider: null
+plugin: 'facet_block:category_price'
+settings:
+  id: 'facet_block:category_price'
+  label: Цена
+  provider: facets
+  label_display: visible
+  block_id: category_price_facet
+visibility:
+  catalog_page_condition:
+    id: catalog_page_condition
+    catalog_root: 'no'
+    catalog_category: 'yes'
+    catalog_product: any
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+      term: '@taxonomy_term.taxonomy_term_route_context:term'
+      product: '@commerce_product.product_route_context:commerce_product'

@@ -1,0 +1,33 @@
+.paragraph--type--card-mini.paragraph--view-mode--white-card-shadow {
+  background-color: $c_white;
+  color: $c_gray;
+  height: 100%;
+  box-shadow: 5px 5px 10px #d4d0d0;
+  padding-bottom: 50px;
+
+  .field--name-field-link {
+    margin: 2em 0;
+
+    a {
+      //@include ba;
+    }
+  }
+}
+
+
+.paragraph--type--container.paragraph-style--columns > .field--name-field-content.erd-list--white-card-shadow {
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+  > .field__item {
+    flex: 1;
+    max-width: span(4);
+    margin-right: gutter();
+    margin-top: gutter();
+    margin-bottom: gutter();
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

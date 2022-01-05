@@ -1,0 +1,28 @@
+uuid: ee2c6b4f-76f7-4701-9702-ab6c33de1643
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_hero_background
+    - media.type.image
+    - taxonomy.vocabulary.category
+id: taxonomy_term.category.field_hero_background
+field_name: field_hero_background
+entity_type: taxonomy_term
+bundle: category
+label: 'Фон баннера'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

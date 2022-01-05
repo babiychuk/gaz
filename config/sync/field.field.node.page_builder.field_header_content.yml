@@ -1,0 +1,75 @@
+uuid: e368fbfd-1c57-4ab9-971c-175af2be1d5d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_content
+    - node.type.page_builder
+    - paragraphs.paragraphs_type.container
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.text_block
+  module:
+    - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.page_builder.field_header_content
+field_name: field_header_content
+entity_type: node
+bundle: page_builder
+label: 'Header content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      container: container
+      from_library: from_library
+      text_block: text_block
+    target_bundles_drag_drop:
+      card_mini:
+        weight: 14
+        enabled: false
+      container:
+        enabled: true
+        weight: 15
+      faq:
+        weight: 16
+        enabled: false
+      from_library:
+        enabled: true
+        weight: 17
+      linked_image:
+        weight: 18
+        enabled: false
+      media:
+        weight: 19
+        enabled: false
+      supply_schemes_block:
+        weight: 20
+        enabled: false
+      tabbed_cards:
+        weight: 21
+        enabled: false
+      tab_card:
+        weight: 22
+        enabled: false
+      text_block:
+        enabled: true
+        weight: 23
+      updown_text:
+        weight: 24
+        enabled: false
+      view:
+        weight: 25
+        enabled: false
+      write_about_us:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions

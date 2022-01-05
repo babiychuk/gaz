@@ -1,0 +1,21 @@
+uuid: 89657916-5cff-4c7c-b700-cb386755a1f4
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.tab_card
+  module:
+    - text
+id: paragraph.tab_card.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: tab_card
+label: 'Содержимое вкладки'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

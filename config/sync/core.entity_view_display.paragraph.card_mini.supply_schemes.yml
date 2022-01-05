@@ -1,0 +1,38 @@
+uuid: 8add5454-82bd-4011-bf38-416b02f39422
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.supply_schemes
+    - field.field.paragraph.card_mini.field_description
+    - field.field.paragraph.card_mini.field_image
+    - field.field.paragraph.card_mini.field_link
+    - field.field.paragraph.card_mini.field_style
+    - field.field.paragraph.card_mini.field_title
+    - paragraphs.paragraphs_type.card_mini
+id: paragraph.card_mini.supply_schemes
+targetEntityType: paragraph
+bundle: card_mini
+mode: supply_schemes
+content:
+  field_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_description: true
+  field_link: true
+  field_style: true

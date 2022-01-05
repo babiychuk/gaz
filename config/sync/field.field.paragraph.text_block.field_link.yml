@@ -1,0 +1,23 @@
+uuid: edd003af-64e9-4d32-a80b-d1a2faa27ec9
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.text_block
+  module:
+    - link
+id: paragraph.text_block.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: text_block
+label: Ссылка
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

@@ -1,0 +1,25 @@
+#block-socialmedia-links-footer {
+  margin: 1rem 0;
+
+  ul {
+    > li {
+      padding: 0;
+
+      a {
+        display: inline-block;
+        width: 2.5em;
+        padding: 0;
+        height: 2.5em;
+        border: 1px solid;
+        line-height: 2.5em;
+        font-size: 0.75em;
+
+        color: inherit;
+
+        &:hover {
+          color: $c_light_gray;
+        }
+      }
+    }
+  }
+}

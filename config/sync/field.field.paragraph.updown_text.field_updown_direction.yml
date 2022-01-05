@@ -1,0 +1,23 @@
+uuid: 91a15747-b80e-46e4-b2aa-6175219f4681
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_updown_direction
+    - paragraphs.paragraphs_type.updown_text
+  module:
+    - options
+id: paragraph.updown_text.field_updown_direction
+field_name: field_updown_direction
+entity_type: paragraph
+bundle: updown_text
+label: Напрвление
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: up
+default_value_callback: ''
+settings: {  }
+field_type: list_string

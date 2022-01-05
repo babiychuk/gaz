@@ -1,0 +1,46 @@
+display:
+  default:
+    display_title: Головне
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Фільтр
+          reset_button_label: Скинути
+          exposed_sorts_label: 'Впорядкувати за'
+          sort_asc_label: Зрост
+          sort_desc_label: Спад
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Елементів на сторінку'
+            items_per_page_options_all_label: '- Усе -'
+            offset_label: Зміщення
+          tags:
+            previous: ‹‹
+            next: ››
+      fields:
+        entity_browser_select:
+          label: Вибір
+        label:
+          label: Мітка
+          separator: ', '
+        type:
+          label: Тип
+          separator: ', '
+        paragraphs__target_id:
+          label: Абзаци
+          separator: ', '
+        changed:
+          label: Змінено
+          separator: ', '
+      filters:
+        label:
+          expose:
+            label: Мітка
+          group_info:
+            label: Мітка
+        type:
+          expose:
+            label: Тип
+  entity_browser:
+    display_title: 'Оглядач сутностей'

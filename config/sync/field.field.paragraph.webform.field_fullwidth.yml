@@ -1,0 +1,28 @@
+uuid: 4ec9aba4-0c4b-4261-8573-878cd6d0c118
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_fullwidth
+    - paragraphs.paragraphs_type.webform
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.webform.field_fullwidth
+field_name: field_fullwidth
+entity_type: paragraph
+bundle: webform
+label: 'На всю ширину'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

@@ -1,0 +1,10 @@
+uuid: 4006dc65-0f63-4203-935a-92e67cb8ff88
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+id: node.category_listing
+label: 'Category listing'
+targetEntityType: node
+cache: true

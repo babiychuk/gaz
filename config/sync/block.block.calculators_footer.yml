@@ -1,0 +1,29 @@
+uuid: e88b0b4d-c291-4884-ac47-61db4daf04ca
+langcode: uk
+status: true
+dependencies:
+  config:
+    - system.menu.calculators
+  module:
+    - menu_block
+  theme:
+    - uag
+id: calculators_footer
+theme: uag
+region: footer_col_3
+weight: -8
+provider: null
+plugin: 'menu_block:calculators'
+settings:
+  id: 'system_menu_block:calculators'
+  label: '<a href="https://ru.stage.ukravtonomgaz.ua/skhemy-gazosnabzheniya">Схемы газоснабжения</a>'
+  provider: menu_block
+  label_display: visible
+  level: 1
+  depth: 1
+  expand: 0
+  parent: 'calculators:menu_link_content:3a5a9c67-a89f-41b3-abad-81ec0061d12a'
+  suggestion: calculators
+  label_type: fixed_parent
+  label_link: 1
+visibility: {  }

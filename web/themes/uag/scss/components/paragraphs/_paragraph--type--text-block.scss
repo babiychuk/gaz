@@ -1,0 +1,45 @@
+.paragraph--type--text-block {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 100%;
+
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  .field--name-field-description {
+    //
+  }
+
+  .field--name-field-link {
+    text-align: right;
+    margin-top: 2em;
+
+    a {
+      @include button($c_primary, $c_white);
+    }
+  }
+}
+
+.paragraph--type--container.paragraph-color-scheme-blue .paragraph--type--text-block {
+  .field--name-field-link {
+    a {
+      @include button($c_white, $c_primary);
+    }
+  }
+}
+
+
+/*
+.paragraph--type--container > .field--name-field-content > .field_item__n1 > .paragraph--type--text-block {
+  //padding-right: 5rem;
+}
+
+.paragraph--type--container > .field--name-field-content > .field_item__n2 > .paragraph--type--text-block {
+  //padding-left: 5rem;
+
+  .field--name-field-link {
+    text-align: left;
+  }
+}
+*/

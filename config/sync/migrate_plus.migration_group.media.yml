@@ -1,0 +1,10 @@
+uuid: b1b27034-af09-432b-aacb-15ed853febb6
+langcode: uk
+status: true
+dependencies: {  }
+id: media
+label: media
+description: ''
+source_type: null
+module: null
+shared_configuration: null

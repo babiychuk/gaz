@@ -1,0 +1,14 @@
+.paragraph--type--view {
+  &.paragraph-fullwidth {
+    .field--name-field-view,
+    .field--name-field-title {
+      @include container;
+    }
+  }
+
+  &.paragraph-has-background {
+    > .field--name-field-title {
+      color: white;
+    }
+  }
+}

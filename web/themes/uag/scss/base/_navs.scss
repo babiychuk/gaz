@@ -1,0 +1,30 @@
+.layout-container footer {
+  nav {
+    ul.menu {
+      margin-left: 0;
+
+      li {
+        padding-top: 0;
+
+        a {
+          color: inherit;
+          text-decoration: none;
+
+          &.active {
+            color: $c_white_2;
+          }
+
+          &:hover {
+            color: $c_light_blue;
+          }
+
+          &:focus {
+            outline: none;
+            text-decoration: underline;
+            color: $c_light_blue;
+          }
+        }
+      }
+    }
+  }
+}

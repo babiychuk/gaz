@@ -1,0 +1,18 @@
+uuid: 879891a1-43dd-40fc-8792-93868bdb58c3
+langcode: uk
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.block
+id: paragraph.block.created
+field_name: created
+entity_type: paragraph
+bundle: block
+label: Створено
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

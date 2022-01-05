@@ -1,0 +1,18 @@
+uuid: ea13b420-3869-4d1c-9872-b4e7f3486ff4
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.catalog
+id: taxonomy_term.catalog.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: catalog
+label: Мета-теги
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

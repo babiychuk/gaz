@@ -1,0 +1,55 @@
+.paragraph--type--tabbed-cards {
+  $c_tab_color: $c_gray;
+
+  // https://a11y.nicolas-hoffmann.net/tabs/#step2
+  > .field--name-field-content {
+    //Before js
+    > ul.js-tablist {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-flow: row nowrap;
+
+      > li {
+        margin: 1rem 1rem 0;
+
+        > a {
+          display: inline-block;
+          border: 1px solid $c_tab_color;
+          border-bottom: none;
+          color: $c_tab_color;
+          background-color: white;
+        }
+
+        > a:hover {
+          opacity: 0.5;
+        }
+
+        > a[aria-selected=true] {
+          color: white;
+          background-color: $c_tab_color;
+        }
+      }
+    }
+
+    //After js
+    > ul[role=tablist] {
+
+    }
+
+    // Before js
+    .js-tabcontent {
+      background-color: $c_tab_color;
+      margin: 0 1rem 1rem;
+      padding: 1em;
+      color: white;
+    }
+    // After js
+    [role="tabpanel"] {
+      &[aria-hidden="true"] {
+        display: none;
+      }
+    }
+  }
+}

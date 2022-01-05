@@ -1,0 +1,24 @@
+<?php
+
+function uag_blocks_theme($existing, $type, $theme, $path) {
+  return [
+    'uag_block_calculator' => [
+      'variables' => [
+        'sliders' => NULL,
+        'table_rows' => NULL,
+        'boiler_power' => 1000
+      ],
+    ],
+    'uag_block_objects_map' => [
+      'variables' => [
+      ],
+    ],
+    'uag_block_objects_map_region' => [
+      'variables' => [
+        'title' => '',
+        'objects' => 0,
+        'phone' => '',
+      ]
+    ],
+  ];
+}

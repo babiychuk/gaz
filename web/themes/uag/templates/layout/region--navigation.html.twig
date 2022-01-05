@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region <div>.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+{%
+  set classes = [
+    'region',
+    'region-' ~ region|clean_class,
+  ]
+%}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    {{ content }}
+    <div class="buttons" style="display: none">
+      <ul>
+        <li>
+          {# We use button to use in js #}
+          <button class="reset-appearance">aaa</button>
+        </li>
+        <li>
+          <button class="reset-appearance">bbb</button>
+        </li>
+        <li>
+          <button class="reset-appearance">ccc</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+{% endif %}

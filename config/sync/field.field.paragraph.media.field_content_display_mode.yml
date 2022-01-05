@@ -1,0 +1,28 @@
+uuid: dbe928dd-62ec-4f0a-ad9c-c319e2aa45f6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content_display_mode
+    - paragraphs.paragraphs_type.media
+  module:
+    - entity_reference_display
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.media.field_content_display_mode
+field_name: field_content_display_mode
+entity_type: paragraph
+bundle: media
+label: 'Режим отображения'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  exclude:
+    colorbox: colorbox
+  negate: 1
+field_type: entity_reference_display

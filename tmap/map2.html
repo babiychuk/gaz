@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>Карта Украины</title>
+
+	<link href="./css/jqvmap.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="./js/jqvmap.js"></script>
+	<script src="./js/myPath.js"></script>
+	<script src="./js/ukraine.js"></script>
+
+	<script>
+		jQuery(document).ready(function() {
+		
+		
+		var href = [];
+		var link_name = [];
+		
+		var data = {"info":[
+		{"link_name":null,"href":"Вінницька область. Кількість побудованих обєктів 13 / (067) 433-88-70","id":"1"},
+		{"link_name":null,"href":"Волинська область","id":"2"},
+		{"link_name":null,"href":"Дніпропетровська область. Кількість побудованих обєктів 3 / (067) 433-88-70","id":"3"},
+		{"link_name":null,"href":"Донецька область","id":"4"},
+		{"link_name":null,"href":"Житомирська область. Кількість побудованих обєктів 5 /(067) 433-88-70","id":"5"},
+		{"link_name":null,"href":"Закарпатська область","id":"6"},
+		{"link_name":null,"href":"Запорізька область","id":"7"},
+		{"link_name":null,"href":"Івано-Франківська область","id":"8"},
+		{"link_name":null,"href":"Київська область. Кількість побудованих обєктів 12 / (067) 433-88-70","id":"9"},
+		{"link_name":null,"href":"Кіровоградська область. Кількість побудованих обєктів 14 / (067) 433-88-70","id":"10"},
+		{"link_name":null,"href":"Луганська область","id":"11"},
+		{"link_name":null,"href":"Львівська область. Кількість побудованих обєктів 1 / (067) 433-88-70","id":"12"},
+		{"link_name":null,"href":"Миколаївська область. Кількість побудованих обєктів 1 / (067) 433-88-70","id":"13"},
+		{"link_name":null,"href":"Одеська область","id":"14"},
+		{"link_name":null,"href":"Полтавська область. Кількість побудованих обєктів 1 / (067) 433-88-70","id":"15"},
+		{"link_name":null,"href":"Рівненська область. Кількість побудованих обєктів 2 / (067) 433-88-70","id":"16"},
+		{"link_name":null,"href":"Сумська область. Кількість побудованих обєктів 6 / (067) 433-88-70","id":"17"},
+		{"link_name":null,"href":"Тернопільська область","id":"18"},
+		{"link_name":null,"href":"Харківська область. Кількість побудованих обєктів 6 / (067) 433-88-70","id":"19"},
+		{"link_name":null,"href":"Херсонська область","id":"20"},
+		{"link_name":null,"href":"Хмельницька область. Кількість побудованих обєктів 1 / (067) 433-88-70","id":"21"},
+		{"link_name":null,"href":"Черкаська область. Кількість побудованих обєктів 8 / (067) 433-88-70","id":"22"},
+		{"link_name":null,"href":"Чернігівська область. Кількість побудованих обєктів 9 / (067) 433-88-70","id":"23"},
+		{"link_name":null,"href":"Чернівецька область","id":"24"},
+		{"link_name":null,"href":"Автономна Республіка Крим","id":"25"},
+		{"link_name":null,"href":"м.Київ","id":"26"}]};
+						
+						
+						
+                for(var i = 0; i < data.info.length; i++){
+
+              					
+					href[data.info[i].id] = data.info[i].href;
+					link_name[data.info[i].id] = data.info[i].link_name;
+			
+                }
+				
+				
+				for(var j = 1; j < href.length; j++){		
+					myPath[j]["name"] = href[j];		
+				}
+				
+            
+					
+					
+			
+			
+			iniMap();
+
+			jQuery('#ua').vectorMap(
+
+			{
+
+				map: 'ukraine',
+				backgroundColor: 'white',
+				borderColor: '#ffffff',
+				borderOpacity: 0.60,
+				borderWidth: 2,
+				color: '#4992d0',
+				hoverColor: '#63ace0',
+				selectedColor: '#98d0f3',
+
+			}
+
+			);
+		
+			$(".jvectormap-region").click(function() {
+				var idPath = $(this).attr("id");
+				
+				
+				idPath = parseInt(idPath.substring(8, 10));			
+				
+				window.open(link_name[idPath],"_parent");
+				
+			});
+			
+			$('#jqvmap1_26').attr("fill", "#63ace0");
+
+		});
+	</script>
+
+
+</head>
+
+<body>
+
+	<div id="ua"></div>
+
+</body>
+
+</html>

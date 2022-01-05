@@ -1,0 +1,18 @@
+uuid: 6ee918ce-eda5-406c-8ad3-9eb72c2574f4
+langcode: uk
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.faq
+id: paragraph.faq.created
+field_name: created
+entity_type: paragraph
+bundle: faq
+label: Створено
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

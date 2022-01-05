@@ -1,0 +1,10 @@
+uuid: 507a7621-851f-4390-aceb-5a841b0338c9
+langcode: uk
+status: true
+dependencies: {  }
+machine: live
+description: null
+name: Live
+url: 'http://ukravtonomgaz.ua/'
+fg_color: '#feffff'
+bg_color: '#c45252'

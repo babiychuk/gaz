@@ -1,0 +1,21 @@
+uuid: af9c18aa-d5c4-4148-b01f-65d3611b22d1
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.card_mini
+  module:
+    - text
+id: paragraph.card_mini.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: card_mini
+label: Описание
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,14 @@
+{
+  "name": "drupal/gaz_admin",
+  "type": "drupal-module",
+  "description": "Admin extras",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/gaz_admin",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/gaz_admin",
+    "source": "http://cgit.drupalcode.org/gaz_admin"
+  },
+  "require": { }
+}

@@ -1,0 +1,29 @@
+uuid: 711466ad-32a7-473f-98bd-2c9b033f10a1
+langcode: ru
+status: false
+dependencies:
+  config:
+    - facets.facet.price
+  module:
+    - facets
+    - system
+  theme:
+    - uag
+id: cena
+theme: uag
+region: catalog_side
+weight: 0
+provider: null
+plugin: 'facet_block:price'
+settings:
+  id: 'facet_block:price'
+  label: Цена
+  provider: facets
+  label_display: visible
+  block_id: cena
+visibility:
+  request_path:
+    id: request_path
+    pages: "/catalog\r\n/shop"
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,10 @@
+uuid: 78d6b6c6-6424-427c-b80c-bfa039419fb0
+langcode: uk
+status: true
+dependencies: {  }
+machine: stage
+description: null
+name: Stage
+url: 'http://stage.ukravtonomgaz.ua/'
+fg_color: '#feffff'
+bg_color: '#bca951'

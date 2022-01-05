@@ -1,0 +1,14 @@
+.paragraph--type--webform {
+
+  &.paragraph-fullwidth {
+    .field--name-field-webform {
+      @include container;
+    }
+  }
+
+  .field--name-field-webform {
+    form {
+
+    }
+  }
+}

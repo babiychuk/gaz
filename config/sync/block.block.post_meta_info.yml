@@ -1,0 +1,22 @@
+uuid: 30924d73-6f64-4419-bd0b-1156da9522d5
+langcode: uk
+status: true
+dependencies:
+  module:
+    - uag_blocks
+  theme:
+    - uag
+id: post_meta_info
+theme: uag
+region: header_bottom
+weight: 0
+provider: null
+plugin: uag_post_meta
+settings:
+  id: uag_post_meta
+  label: 'Post meta info'
+  provider: uag_blocks
+  label_display: '0'
+  context_mapping:
+    node: '@node.node_route_context:node'
+visibility: {  }

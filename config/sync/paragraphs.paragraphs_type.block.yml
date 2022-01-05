@@ -1,0 +1,14 @@
+uuid: 26193ad4-4f66-44b9-a3e0-ba45108a1f5f
+langcode: uk
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: block
+label: 'Drupal block'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

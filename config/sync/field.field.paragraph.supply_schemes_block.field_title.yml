@@ -1,0 +1,24 @@
+uuid: 6b184591-ccb7-45af-9dd2-73a7d5653508
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.supply_schemes_block
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.supply_schemes_block.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: supply_schemes_block
+label: Заголовок
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

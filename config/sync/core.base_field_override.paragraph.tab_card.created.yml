@@ -1,0 +1,18 @@
+uuid: c3af1399-1378-4e17-b82a-13958cb70af5
+langcode: uk
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.tab_card
+id: paragraph.tab_card.created
+field_name: created
+entity_type: paragraph
+bundle: tab_card
+label: Створено
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

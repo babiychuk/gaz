@@ -1,0 +1,19 @@
+uuid: 191f1e38-95a2-4b20-9e7f-9f7aafc229af
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.write_about_us
+id: paragraph.write_about_us.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: write_about_us
+label: Заголовок
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

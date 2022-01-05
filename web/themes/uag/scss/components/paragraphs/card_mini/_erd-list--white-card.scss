@@ -1,0 +1,23 @@
+.paragraph--type--card-mini.paragraph--view-mode--white-card {
+  background-color: white;
+  border: 1px solid $c_primary;
+  color: $c_primary;
+  text-align: center;
+  //margin: 1em auto;
+}
+
+
+.paragraph--type--container.paragraph-style--columns > .field--name-field-content.erd-list--white-card {
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+  > .field__item {
+    flex: auto;
+    width: span(4);
+    margin: 0 gutter() gutter() 0;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}

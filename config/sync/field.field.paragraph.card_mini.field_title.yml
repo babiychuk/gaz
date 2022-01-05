@@ -1,0 +1,19 @@
+uuid: 1bd2f6c2-d80f-43c0-a651-fbc0a6482084
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.card_mini
+id: paragraph.card_mini.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: card_mini
+label: Заголовок
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

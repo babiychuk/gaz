@@ -1,0 +1,31 @@
+.paragraph--type--supply-schemes-block {
+  margin-left: span(2 wide);
+  width: span(8);
+  color: $c_gray;
+
+  > .field--name-field-title {
+  //  Title
+  }
+
+  .field--name-field-supply-schemes-top,
+  .field--name-field-supply-schemes-bottom {
+
+    //Top cards
+    display: flex;
+    flex-flow: row;
+
+    > .field__item {
+      width: span(3);
+      margin-right: gutter();
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .field--name-field-content {
+    //h3 {
+    //}
+  }
+}

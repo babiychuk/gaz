@@ -1,0 +1,25 @@
+uuid: b4ff5ed3-3364-4fdd-815b-260e50474c48
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - uag
+id: uag_breadcrumbs
+theme: uag
+region: header
+weight: -6
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Строка навигации'
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

@@ -1,0 +1,15 @@
+uuid: 7e6e3a24-030c-4227-9f5c-38a2b714aa93
+name: Укравтономгаз
+mail: info@ukravtonomgaz.ua
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/1333
+admin_compact_mode: false
+weight_select_max: 100
+langcode: ru
+default_langcode: ru
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+mail_notification: ''

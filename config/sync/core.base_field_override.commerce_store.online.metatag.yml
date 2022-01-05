@@ -1,0 +1,18 @@
+uuid: 03cb8d3f-f826-44f6-9a10-e40e7da98807
+langcode: uk
+status: true
+dependencies:
+  config:
+    - commerce_store.commerce_store_type.online
+id: commerce_store.online.metatag
+field_name: metatag
+entity_type: commerce_store
+bundle: online
+label: Мета-теги
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

@@ -1,0 +1,62 @@
+uuid: 117d2fe5-f872-453a-ad1e-e2378afdb10d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view
+    - paragraphs.paragraphs_type.view
+  module:
+    - viewsreference
+id: paragraph.view.field_view
+field_name: field_view
+entity_type: paragraph
+bundle: view
+label: Представление
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    feed: 0
+    embed: 0
+  preselect_views:
+    block_content: 0
+    commerce_carts: 0
+    commerce_cart_block: 0
+    commerce_cart_form: 0
+    commerce_checkout_order_summary: 0
+    commerce_orders: 0
+    commerce_order_item_table: 0
+    commerce_products: 0
+    commerce_stores: 0
+    commerce_user_orders: 0
+    content: 0
+    content_recent: 0
+    files: 0
+    frontpage: 0
+    media: 0
+    paragraphs_library: 0
+    profiles: 0
+    redirect: 0
+    redirect_404: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    watchdog: 0
+    who_s_new: 0
+    who_s_online: 0
+  enabled_settings:
+    argument: argument
+    offset: 0
+    limit: 0
+    pager: 0
+    title: title
+field_type: viewsreference

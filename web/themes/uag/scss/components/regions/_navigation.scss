@@ -1,0 +1,28 @@
+.region-navigation {
+  @include container;
+
+  color: $c_header_text;
+
+  // Position blocks
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+  align-items: baseline;
+
+  > .buttons {
+    //margin-left: 0;
+    //margin-right: 0;
+
+    ul {
+      list-style-type: none;
+
+      li {
+        display: inline;
+
+        button {
+          // TODO: add class for reset button styles
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.block-system-breadcrumb-block {
+  nav.breadcrumb {
+    ol {
+      li {
+        color: $c_white;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+
+          &:hover {
+            color: $c_white_2;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * @file
+ * Contains gaz_admin.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function gaz_admin_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the gaz_admin module.
+    case 'help.page.gaz_admin':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Admin extras') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ * TODO: Parse tokens!
+ */
+function gaz_admin_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  // \Drupal::messenger()->addMessage($form_id);
+  switch ($form_id) {
+    case 'node_news_edit_form':
+    case 'node_page_edit_form':
+    case 'node_case_edit_form':
+    case 'node_service_edit_form':
+    case 'taxonomy_term_catalog_form':
+    case 'taxonomy_term_category_form':
+      if (isset($form['field_metatags'])) {
+        $element = $form['field_metatags']['widget'][0]['basic']['description'];
+        $element['#maxlength_js'] = TRUE;
+        $element['#attributes']['data-maxlength'] = 180;
+        // $element['#attributes']['#maxlength_js_enforce'] = FALSE;
+        $form['field_metatags']['widget'][0]['basic']['description'] = $element;
+
+        $element = $form['field_metatags']['widget'][0]['basic']['title'];
+        $element['#maxlength_js'] = TRUE;
+        $element['#attributes']['data-maxlength'] = 59;
+        // $element['#attributes']['#maxlength_js_enforce'] = FALSE;
+        $form['field_metatags']['widget'][0]['basic']['title'] = $element;
+
+      }
+  }
+}

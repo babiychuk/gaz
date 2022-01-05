@@ -1,0 +1,25 @@
+uuid: 0d72e65b-d2f3-4d5d-b4e8-eea76f914e23
+langcode: uk
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0478f399-a613-40b1-ad3f-347b05bcd626'
+  module:
+    - block_content
+  theme:
+    - uag
+id: contacts_footer
+theme: uag
+region: footer_col_5
+weight: -13
+provider: null
+plugin: 'block_content:0478f399-a613-40b1-ad3f-347b05bcd626'
+settings:
+  id: 'block_content:0478f399-a613-40b1-ad3f-347b05bcd626'
+  label: 'Контакты подвал'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

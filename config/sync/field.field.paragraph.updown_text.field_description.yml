@@ -1,0 +1,21 @@
+uuid: c66bc158-95ce-4b95-85f1-35fc5216c948
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.updown_text
+  module:
+    - text
+id: paragraph.updown_text.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: updown_text
+label: Текст
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

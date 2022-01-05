@@ -1,0 +1,46 @@
+uuid: 7186f684-a3cb-4663-b884-b44c1ac206e8
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.linked_image
+    - paragraphs.paragraphs_type.write_about_us
+  module:
+    - entity_reference_revisions
+id: paragraph.write_about_us.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: write_about_us
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      linked_image: linked_image
+    target_bundles_drag_drop:
+      linked_image:
+        enabled: true
+        weight: 7
+      card_mini:
+        weight: 8
+        enabled: false
+      container:
+        weight: 9
+        enabled: false
+      from_library:
+        weight: 10
+        enabled: false
+      view:
+        weight: 11
+        enabled: false
+      write_about_us:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,19 @@
+.ui-corner-all {
+  border-radius: 0;
+}
+
+.ui-widget.ui-widget-content {
+  border: 1px solid $c_primary;
+}
+
+.ui-widget-overlay {
+  background-color: rgba($c_black, 0.2);
+}
+
+.ui-icon-closethick {
+  text-indent: 0;
+
+  &::before {
+    @include uag-fa-icon($fa-var-times);
+  }
+}

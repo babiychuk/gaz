@@ -1,0 +1,25 @@
+.paragraph--type--card-mini {
+  padding: .5rem;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+
+  > .field--name-field-title {
+    font-size: 1em;
+  }
+
+  .field--name-field-link {
+    a {
+      @include button-primary();
+    }
+  }
+  //color: white;
+}
+
+@import "card_mini/erd-list--white-card";
+@import "card_mini/paragraph--view-mode--about-uag";
+@import "card_mini/paragraph--view-mode--supply-schemes";
+@import "card_mini/erd-list--dark-gray-card";
+@import "card_mini/erd-list--white-card-shadow";

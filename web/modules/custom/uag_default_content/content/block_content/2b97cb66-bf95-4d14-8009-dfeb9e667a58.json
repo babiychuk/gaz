@@ -1,0 +1,157 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/gaz.local\/block\/1?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/basic\/revision_user": [
+            {
+                "href": "http:\/\/en.gaz.local\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/basic\/content_translation_uid": [
+            {
+                "href": "http:\/\/en.gaz.local\/user\/1?_format=hal_json",
+                "lang": "und"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 1
+        }
+    ],
+    "uuid": [
+        {
+            "value": "2b97cb66-bf95-4d14-8009-dfeb9e667a58"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 3
+        }
+    ],
+    "langcode": [
+        {
+            "value": "und",
+            "lang": "und"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "basic"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2018-06-25T12:34:48+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/basic\/revision_user": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/en.gaz.local\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "a697291c-226a-4bb7-8c3d-0e48b469c60c"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/basic\/content_translation_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/en.gaz.local\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "a697291c-226a-4bb7-8c3d-0e48b469c60c"
+                    }
+                ],
+                "lang": "und"
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "und"
+        }
+    ],
+    "info": [
+        {
+            "value": "\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u044b \u0448\u0430\u043f\u043a\u0430",
+            "lang": "und"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-06-25T12:34:48+00:00",
+            "lang": "und",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "und"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "und"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "| \u0423\u043a\u0440\u0430\u0432\u0442\u043e\u043d\u043e\u043c\u0433\u0430\u0437",
+                "canonical_url": "http:\/\/gaz.local\/node\/1333"
+            }
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "und"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "und"
+        }
+    ],
+    "content_translation_created": [
+        {
+            "value": "2018-06-25T12:03:14+00:00",
+            "lang": "und",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p><span class=\"fontawesome-icon-inline\"><span class=\"fa-phone fas\"><\/span>&nbsp;<\/span>+38 067 433 88 70<br \/>\r\n<span class=\"fontawesome-icon-inline\"><span class=\"fa-envelope fas\"><\/span>&nbsp;<\/span>info@ukravtonomgaz.ua<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p><span class=\"fontawesome-icon-inline\"><span class=\"fa-phone fas\"><\/span>\u00a0<\/span>+38 067 433 88 70<br \/><span class=\"fontawesome-icon-inline\"><span class=\"fa-envelope fas\"><\/span>\u00a0<\/span>info@ukravtonomgaz.ua<\/p>",
+            "summary": "",
+            "lang": "und"
+        }
+    ]
+}

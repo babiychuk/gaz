@@ -1,0 +1,54 @@
+.view-front-products.view-display-id-block_1 {
+  position: relative;
+  //$m: gutter() / 100% * 70rem / 2;
+  $m: gutter() / 2;
+  margin-left: -#{$m};
+  margin-right: -#{$m};
+
+  //Equal height
+  .slick-track{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+
+    .slick-slide {
+      height: auto;
+      margin: 0 $m;
+    }
+  }
+
+  .view-footer {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .slick__arrow {
+    button {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: auto;
+      border: none;
+      color: $c_gray;
+
+      &:hover {
+        color: white;
+        background-color: $c_primary;
+      }
+    }
+
+    button.slick-prev {
+      left: 0;
+      right: auto;
+      transform: translateY(-50%) translateX(-100%)
+    }
+
+    button.slick-next {
+      left: auto;
+      right: 0;
+      transform: translateY(-50%) translateX(100%)
+    }
+  }
+}

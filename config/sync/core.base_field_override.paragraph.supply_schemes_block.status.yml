@@ -1,0 +1,22 @@
+uuid: d6321f5e-b543-4dc2-9a04-ceb1d2147248
+langcode: uk
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.supply_schemes_block
+id: paragraph.supply_schemes_block.status
+field_name: status
+entity_type: paragraph
+bundle: supply_schemes_block
+label: Опубліковано
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

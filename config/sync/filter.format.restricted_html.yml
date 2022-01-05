@@ -1,0 +1,40 @@
+uuid: 97767221-3712-405c-bcf8-bb3d934ec683
+langcode: en
+status: true
+dependencies:
+  module:
+    - nofollowlist
+name: 'Restricted HTML'
+format: restricted_html
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<a href hreflang rel> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
+  nofollowlist:
+    id: nofollowlist
+    provider: nofollowlist
+    status: true
+    weight: 0
+    settings:
+      nofollowlist_option: white
+      nofollowlist_hosts: "gaz.local\r\nen.gaz.local\r\nru.gaz.local\r\nstage.ukravtonomgaz.ua\r\nen.stage.ukravtonomgaz.ua\r\nru.stage.ukravtonomgaz.ua\r\ndev.ukravtonomgaz.ua\r\nen.dev.ukravtonomgaz.ua\r\nru.dev.ukravtonomgaz.ua\r\n"

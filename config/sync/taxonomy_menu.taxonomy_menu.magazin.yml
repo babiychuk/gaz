@@ -1,0 +1,14 @@
+uuid: 51695c83-9f4a-4c85-bc2c-96bf1a271e8d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.magazin
+    - taxonomy.vocabulary.catalog
+id: magazin
+label: Магазин
+vocabulary: catalog
+menu: magazin
+expanded: false
+depth: 2
+menu_parent: 'magazin:'

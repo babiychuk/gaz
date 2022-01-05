@@ -1,0 +1,20 @@
+.paragraph--type--media {
+  &.media-placement-left > .field--name-field-media.field__items {
+    text-align: left;
+  }
+
+  &.media-placement-center > .field--name-field-media.field__items {
+    text-align: center;
+  }
+
+  &.media-placement-right > .field--name-field-media.field__items {
+    text-align: right;
+  }
+
+  // TODO: setup this on youtube.
+  //> .field--name-field-media.field__items {
+  //  > .field__item {
+  //    display: inline-block;
+  //  }
+  //}
+}

@@ -1,0 +1,9 @@
+uuid: ccb5c6b4-e3b1-4561-9fe8-79afd1f1dc02
+langcode: und
+status: true
+dependencies: {  }
+name: Категории
+vid: category
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,7 @@
+name: 'UAG Facets'
+type: module
+description: 'Facet plugins, widgets, etc.'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - facets

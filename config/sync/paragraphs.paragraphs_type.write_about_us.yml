@@ -1,0 +1,14 @@
+uuid: e498648c-6dc6-4d05-bdf3-18ff68ddff23
+langcode: ru
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: write_about_us
+label: 'О нас пишут'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,8 @@
+uuid: 9ae3c04c-ef78-4c00-8bf7-75e83b3855fd
+langcode: und
+status: true
+dependencies: {  }
+id: partnership
+label: Партнерам
+description: ''
+locked: false

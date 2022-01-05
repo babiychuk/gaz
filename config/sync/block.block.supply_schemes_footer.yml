@@ -1,0 +1,24 @@
+uuid: c04359dd-a63d-4861-9ad3-3916d0e4bdc9
+langcode: uk
+status: true
+dependencies:
+  config:
+    - system.menu.supply-schemes
+  module:
+    - system
+  theme:
+    - uag
+id: supply_schemes_footer
+theme: uag
+region: footer_col_2
+weight: 0
+provider: null
+plugin: 'system_menu_block:supply-schemes'
+settings:
+  id: 'system_menu_block:supply-schemes'
+  label: 'Схеми газопостачання'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

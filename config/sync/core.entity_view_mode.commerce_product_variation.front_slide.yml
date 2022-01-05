@@ -1,0 +1,10 @@
+uuid: 9b83b526-94e0-454f-928d-ce04a2ba45a7
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.front_slide
+label: 'Front slide'
+targetEntityType: commerce_product_variation
+cache: true

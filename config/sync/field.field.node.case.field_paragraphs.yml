@@ -1,0 +1,89 @@
+uuid: d6d1d016-b3bf-4e6a-9e9f-01432749c99a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.case
+    - paragraphs.paragraphs_type.container
+    - paragraphs.paragraphs_type.faq
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.linked_image
+    - paragraphs.paragraphs_type.media
+    - paragraphs.paragraphs_type.supply_schemes_block
+    - paragraphs.paragraphs_type.tabbed_cards
+    - paragraphs.paragraphs_type.text_block
+    - paragraphs.paragraphs_type.view
+    - paragraphs.paragraphs_type.write_about_us
+  module:
+    - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.case.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: case
+label: Параграфы
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      container: container
+      faq: faq
+      from_library: from_library
+      linked_image: linked_image
+      media: media
+      supply_schemes_block: supply_schemes_block
+      tabbed_cards: tabbed_cards
+      text_block: text_block
+      view: view
+      write_about_us: write_about_us
+    target_bundles_drag_drop:
+      card_mini:
+        weight: 14
+        enabled: false
+      container:
+        enabled: true
+        weight: 15
+      faq:
+        enabled: true
+        weight: 16
+      from_library:
+        enabled: true
+        weight: 17
+      linked_image:
+        enabled: true
+        weight: 18
+      media:
+        enabled: true
+        weight: 19
+      supply_schemes_block:
+        enabled: true
+        weight: 20
+      tab_card:
+        weight: 21
+        enabled: false
+      tabbed_cards:
+        enabled: true
+        weight: 22
+      text_block:
+        enabled: true
+        weight: 23
+      updown_text:
+        weight: 24
+        enabled: false
+      view:
+        enabled: true
+        weight: 25
+      write_about_us:
+        enabled: true
+        weight: 26
+field_type: entity_reference_revisions

@@ -1,0 +1,34 @@
+/*
+
+jqvmap-ukraine-v1,
+11.2015,
+Alexander Bendyuzhko,
+bendyuzhko@gmail.com,
+https://github.com/benya/jqvmap-ukraine
+
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#ua {
+	
+	height: 600px;
+	margin: 0 auto;
+}
+
+.jqvmap-label {
+	background: #336692;
+	color: white;
+	width:150px;
+	border-radius: 6px;
+	padding: 6px;
+	position: absolute;
+	text-align:center;
+}
+
+.jqvmap-zoomin {display: none;}
+
+.jqvmap-zoomout {display: none;}

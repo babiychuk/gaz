@@ -1,0 +1,52 @@
+uuid: b61534d6-0dcb-4c18-b469-7a123445e0b1
+langcode: ru
+status: true
+dependencies: {  }
+id: gaz_product_images
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: products
+migration_group: old_site
+label: 'Product images migration'
+source:
+  plugin: gaz_migrate_product_images
+  key: migrate
+  constants:
+    file_dest_uri: 'public://product-image'
+    file_source_uri: 'https://ukravtonomgaz.ua/'
+process:
+  file_source_path:
+    -
+      plugin: skip_on_empty
+      method: row
+      source: var_image
+  file_source:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/file_source_uri
+        - '@file_source_path'
+    -
+      plugin: urlencode
+  file_dest:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/file_dest_uri
+        - image_filename
+    -
+      plugin: urlencode
+  filename: image_filename
+  uri:
+    -
+      plugin: download
+      rename: true
+      source:
+        - '@file_source'
+        - '@file_dest'
+destination:
+  plugin: 'entity:file'
+migration_dependencies: {  }

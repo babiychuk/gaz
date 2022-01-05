@@ -1,0 +1,24 @@
+uuid: efbfaabd-8ac1-4cc0-9839-24036d0609ad
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+id: page
+label: Page
+type: 'canonical_entities:node'
+pattern: '[node:field_category:entity:parents:join-path]/[node:field_category:entity:name]/[node:title]'
+selection_criteria:
+  f44fdcfa-8a07-477b-92c7-3c91d92f62e0:
+    id: node_type
+    bundles:
+      page: page
+      page_builder: page_builder
+      service: service
+    negate: false
+    context_mapping:
+      node: node
+    uuid: f44fdcfa-8a07-477b-92c7-3c91d92f62e0
+selection_logic: and
+weight: -5
+relationships: {  }

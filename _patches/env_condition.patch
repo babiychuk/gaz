@@ -1,0 +1,154 @@
+diff --git a/src/Plugin/Condition/EnvironmentCondition.php b/src/Plugin/Condition/EnvironmentCondition.php
+index e69de29..faf7924 100644
+--- a/src/Plugin/Condition/EnvironmentCondition.php
++++ b/src/Plugin/Condition/EnvironmentCondition.php
+@@ -0,0 +1,149 @@
++<?php
++
++namespace Drupal\environment_indicator\Plugin\Condition;
++
++use Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException;
++use Drupal\Component\Plugin\Exception\PluginNotFoundException;
++use Drupal\Core\Condition\ConditionPluginBase;
++use Drupal\Core\Form\FormStateInterface;
++use Drupal\Core\Plugin\Context\ContextDefinition;
++
++/**
++* Provides a 'Environment condition' condition to enable a condition based in module selected status.
++*
++* @Condition(
++*   id = "environment_condition",
++*   label = @Translation("Environment"),
++
++* )
++*/
++
++/*
++*   context = {
++*     "environment_indicator" = @ContextDefinition("entity:environment_indicator", required = TRUE , label = @Translation("Environment"))
++*   }
++*/
++
++class EnvironmentCondition extends ConditionPluginBase {
++
++/**
++* {@inheritdoc}
++*/
++public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition)
++{
++    return new static(
++    $configuration,
++    $plugin_id,
++    $plugin_definition
++    );
++}
++
++/**
++ * Creates a new EnvironmentCondition object.
++ *
++ * @param array $configuration
++ *   The plugin configuration, i.e. an array with configuration values keyed
++ *   by configuration option name. The special key 'context' may be used to
++ *   initialize the defined contexts by setting it to an array of context
++ *   values keyed by context names.
++ * @param string $plugin_id
++ *   The plugin_id for the plugin instance.
++ * @param mixed $plugin_definition
++ *   The plugin implementation definition.
++ */
++ public function __construct(array $configuration, $plugin_id, $plugin_definition) {
++    parent::__construct($configuration, $plugin_id, $plugin_definition);
++ }
++
++ /**
++   * {@inheritdoc}
++   */
++ public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
++     // $options = [NULL => t('Select a module')];
++     $options = [];
++     try {
++       $environments = \Drupal::entityTypeManager()
++         ->getStorage('environment_indicator')
++         ->loadMultiple();
++
++       foreach ($environments as $env) {
++         /** @var \Drupal\environment_indicator\Entity\EnvironmentIndicator $env */
++         $options[$env->id()] = $env->name;
++       }
++
++       $form['environments'] = [
++         '#type' => 'checkboxes',
++         '#title' => $this->t('Select environments'),
++         '#default_value' => $this->configuration['environments'],
++         '#options' => $options,
++         '#description' => $this->t("To make this condition work, don't forget to set id key in your settings.php")
++       ];
++
++       return parent::buildConfigurationForm($form, $form_state);
++
++     } catch (InvalidPluginDefinitionException $e) {
++     } catch (PluginNotFoundException $e) {
++       return [];
++     }
++ }
++
++/**
++ * {@inheritdoc}
++ */
++ public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
++     $this->configuration['environments'] = array_filter($form_state->getValue('environments'));
++     parent::submitConfigurationForm($form, $form_state);
++ }
++
++/**
++ * {@inheritdoc}
++ */
++ public function defaultConfiguration() {
++    return ['environments' => []] + parent::defaultConfiguration();
++ }
++
++  /**
++   * Evaluates the condition and returns TRUE or FALSE accordingly.
++   *
++   * @return bool
++   *   TRUE if the condition has been met, FALSE otherwise.
++   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
++   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
++   */
++  public function evaluate() {
++      if (empty($this->configuration['environments']) && !$this->isNegated()) {
++          return TRUE;
++      }
++
++      $environments = $this->configuration['environments'];
++      $active_environment = \Drupal::config('environment_indicator.indicator');
++      if ($active_environment->get('id')) {
++        $current_id = $active_environment->get('id');
++        // $environment_config = \Drupal::entityTypeManager()
++        //   ->getStorage('environment_indicator')
++        //   ->load($active_environment->get('id'));
++        if (in_array($current_id, $environments)) {
++          return TRUE;
++        }
++      }
++      return FALSE;
++  }
++
++/**
++ * Provides a human readable summary of the condition's configuration.
++ */
++ public function summary()
++ {
++   /** @var \Drupal\environment_indicator\Entity\EnvironmentIndicator[] $envs */
++   $envs = $environments = \Drupal::entityTypeManager()
++     ->getStorage('environment_indicator')
++     ->loadMultiple($this->configuration['environments']);
++
++   $env_names = [];
++   foreach ($envs as $env) {
++     $env_names[] = $env->name;
++   }
++
++   return t('Selected environments: @environments', ['@environments' => implode(', ', $env_names)]);
++ }
++}

@@ -1,0 +1,10 @@
+uuid: c260999d-5f40-485c-bdfb-e54762d39576
+langcode: uk
+status: true
+dependencies: {  }
+machine: dev
+description: null
+name: DEV
+url: 'http://dev.ukravtonomgaz.ua/'
+fg_color: '#feffff'
+bg_color: '#38938d'

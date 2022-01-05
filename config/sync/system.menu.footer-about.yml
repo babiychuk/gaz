@@ -1,0 +1,8 @@
+uuid: 1fda15fb-bb52-43e5-a1ff-5d5d02b26938
+langcode: und
+status: true
+dependencies: {  }
+id: footer-about
+label: 'О компании подвал'
+description: подвал
+locked: false

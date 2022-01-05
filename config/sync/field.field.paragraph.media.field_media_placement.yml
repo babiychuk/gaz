@@ -1,0 +1,27 @@
+uuid: 9d171e37-adb1-43a5-9228-08d3d4daa1c3
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_placement
+    - paragraphs.paragraphs_type.media
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.media.field_media_placement
+field_name: field_media_placement
+entity_type: paragraph
+bundle: media
+label: 'Media placement'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: center
+default_value_callback: ''
+settings: {  }
+field_type: list_string

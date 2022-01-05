@@ -1,0 +1,7 @@
+name: 'UAG seo extras'
+type: module
+description: 'SEO related functions, plugins, services, etc.'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - metatag

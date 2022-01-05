@@ -1,0 +1,6 @@
+drush:
+  paths:
+    # Specify config files to load.
+    config:
+      # Load any personal config files. Is silently skipped if not found. Filename must be drush.yml
+      - ../drush/local.drush.yml

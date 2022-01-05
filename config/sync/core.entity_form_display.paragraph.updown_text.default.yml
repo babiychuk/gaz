@@ -1,0 +1,38 @@
+uuid: 60b7f81b-8111-4c1d-a5b8-fe069b7ded96
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.updown_text.field_description
+    - field.field.paragraph.updown_text.field_updown_direction
+    - paragraphs.paragraphs_type.updown_text
+  module:
+    - text
+id: paragraph.updown_text.default
+targetEntityType: paragraph
+bundle: updown_text
+mode: default
+content:
+  field_description:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_updown_direction:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

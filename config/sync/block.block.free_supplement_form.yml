@@ -1,0 +1,33 @@
+uuid: eab131c0-12c0-44da-81b0-351e56894916
+langcode: ru
+status: false
+dependencies:
+  config:
+    - webform.webform.free_supplement
+  module:
+    - node
+    - webform
+  theme:
+    - uag
+id: free_supplement_form
+theme: uag
+region: navigation
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Бесплатное газоснабжение'
+  provider: webform
+  label_display: '0'
+  webform_id: free_supplement
+  default_data: ''
+  redirect: false
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

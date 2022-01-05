@@ -1,0 +1,47 @@
+.product.view-mode-catalog-item {
+  height: 100%;
+  border: 1px solid $c_primary;
+  color: $c_primary;
+  background-color: $c_white;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  text-align: center;
+
+  > .field {
+    border-bottom: 1px solid $c_primary;
+    padding: gutter();
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .field--name-field-image {
+    border-bottom: none;
+    padding: 0;
+  }
+
+  .field--name-title {
+    flex-grow: 1;
+  }
+
+  .field--name-variations {
+    form {
+      .form-actions {
+        margin: 0;
+      }
+
+      button.form-submit {
+        @include button($c_white, $c_primary);
+        border: 2px solid transparent;
+        width: calc(100%);
+
+        &:hover {
+          border: 2px solid $c_primary;
+        }
+      }
+    }
+
+  }
+}

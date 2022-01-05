@@ -1,0 +1,22 @@
+uuid: 9c0e054e-5d86-4f4a-8ce2-757866320eef
+langcode: ru
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+id: paragraphs_library_item.paragraphs_library_item.status
+field_name: status
+entity_type: paragraphs_library_item
+bundle: paragraphs_library_item
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Вкл
+  off_label: Выкл
+field_type: boolean

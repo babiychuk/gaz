@@ -1,0 +1,53 @@
+uuid: 14c80cad-8ebf-4654-abbb-c06f8973561a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_paragraphs
+    - taxonomy.vocabulary.category
+  module:
+    - entity_reference_revisions
+id: taxonomy_term.category.field_paragraphs
+field_name: field_paragraphs
+entity_type: taxonomy_term
+bundle: category
+label: Paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      card_mini:
+        weight: 10
+        enabled: false
+      container:
+        weight: 11
+        enabled: false
+      from_library:
+        weight: 12
+        enabled: false
+      linked_image:
+        weight: 13
+        enabled: false
+      media:
+        weight: 14
+        enabled: false
+      supply_schemes_block:
+        weight: 15
+        enabled: false
+      text_block:
+        weight: 16
+        enabled: false
+      view:
+        weight: 17
+        enabled: false
+      write_about_us:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

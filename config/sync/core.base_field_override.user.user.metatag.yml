@@ -1,0 +1,18 @@
+uuid: 33bc74b4-745a-4810-97c8-90e86b9932c4
+langcode: uk
+status: true
+dependencies:
+  module:
+    - user
+id: user.user.metatag
+field_name: metatag
+entity_type: user
+bundle: user
+label: Мета-теги
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

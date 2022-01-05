@@ -1,0 +1,24 @@
+uuid: b191452d-69fb-4b76-9425-741de116ccf0
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.updown_text.field_description
+    - field.field.paragraph.updown_text.field_updown_direction
+    - paragraphs.paragraphs_type.updown_text
+  module:
+    - text
+id: paragraph.updown_text.default
+targetEntityType: paragraph
+bundle: updown_text
+mode: default
+content:
+  field_description:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_updown_direction: true

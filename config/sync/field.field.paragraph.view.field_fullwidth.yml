@@ -1,0 +1,23 @@
+uuid: 005d9dbe-dc9f-4f98-a2a3-41896a9dd68b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_fullwidth
+    - paragraphs.paragraphs_type.view
+id: paragraph.view.field_fullwidth
+field_name: field_fullwidth
+entity_type: paragraph
+bundle: view
+label: 'На всю ширину'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Вкл
+  off_label: Выкл
+field_type: boolean

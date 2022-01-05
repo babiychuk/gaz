@@ -1,0 +1,14 @@
+uuid: f8a9854a-476c-4ac5-a76b-240ea634f712
+langcode: uk
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: container
+label: Контейнер
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

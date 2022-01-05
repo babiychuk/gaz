@@ -1,0 +1,30 @@
+uuid: 836f8bfb-96c5-418b-bf68-90e7d72af444
+langcode: ru
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_media_placement
+field_name: field_media_placement
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: center
+      label: 'По центру'
+    -
+      value: left
+      label: Слева
+    -
+      value: right
+      label: Справа
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

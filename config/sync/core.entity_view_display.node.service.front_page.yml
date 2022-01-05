@@ -1,0 +1,35 @@
+uuid: be8e6180-00a6-4d39-aba8-b163afacd437
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.front_page
+    - field.field.node.service.body
+    - field.field.node.service.field_category
+    - field.field.node.service.field_image
+    - field.field.node.service.field_metatags
+    - image.style.medium
+    - node.type.service
+  module:
+    - image
+    - user
+id: node.service.front_page
+targetEntityType: node
+bundle: service
+mode: front_page
+content:
+  field_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: content
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_category: true
+  field_metatags: true
+  langcode: true
+  links: true

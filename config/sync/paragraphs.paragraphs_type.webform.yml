@@ -1,0 +1,14 @@
+uuid: fb5dd264-be47-43e2-a478-f9c8d20617a5
+langcode: uk
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: webform
+label: Webform
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

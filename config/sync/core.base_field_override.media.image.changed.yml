@@ -1,0 +1,18 @@
+uuid: d09f0ca1-2897-4f59-81f7-5dd68aca64f3
+langcode: uk
+status: true
+dependencies:
+  config:
+    - media.type.image
+id: media.image.changed
+field_name: changed
+entity_type: media
+bundle: image
+label: Змінено
+description: 'Час останнього редагування медіа-об''єкта.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,10 @@
+uuid: 8a70d4c7-d48c-4cbe-98f0-60fcac6f0a80
+langcode: uk
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.white_card_shadow
+label: 'White card (shadow)'
+targetEntityType: paragraph
+cache: true

@@ -1,0 +1,15 @@
+uuid: 70374f3e-d5d8-45c5-ad1f-af176bf4714f
+langcode: uk
+status: true
+dependencies: {  }
+name: catalog_item
+label: 'Catalog item'
+effects:
+  6f81a183-5978-4a98-8e37-090a79ac1061:
+    uuid: 6f81a183-5978-4a98-8e37-090a79ac1061
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 300
+      anchor: center-center

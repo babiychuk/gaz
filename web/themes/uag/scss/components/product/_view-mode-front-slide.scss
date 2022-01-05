@@ -1,0 +1,47 @@
+.product.view-mode-front-slide {
+  background-color: $c_primary;
+  color: white;
+  //padding: 1rem;
+  height: 100%;
+  text-align: center;
+  display: flex;
+
+  flex-flow: column;
+
+  .field--name-field-image {
+    margin: 1rem;
+  }
+
+  .field--name-title {
+    margin: 1rem;
+  }
+
+  .field--name-price {
+    font-weight: bold;
+    font-size: 1.25em;
+    margin: 0.5em 0;
+  }
+
+  .field--name-variations {
+    margin-bottom: 0;
+    margin-top: auto;
+  }
+
+  form .form-actions {
+    margin: 1rem;
+
+    button {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      // Two button overrides, choose better one.
+      //@include button-white;
+      @include button($c_primary, $c_white, true);
+
+      .fontawesome-icon {
+        display: inline-block;
+      }
+    }
+  }
+}

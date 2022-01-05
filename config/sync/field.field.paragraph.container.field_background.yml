@@ -1,0 +1,28 @@
+uuid: 88fcb5ad-cf68-419c-b9d2-47105ec749ed
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background
+    - media.type.image
+    - paragraphs.paragraphs_type.container
+id: paragraph.container.field_background
+field_name: field_background
+entity_type: paragraph
+bundle: container
+label: Фон
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

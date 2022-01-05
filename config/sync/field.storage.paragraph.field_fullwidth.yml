@@ -1,0 +1,18 @@
+uuid: ea4617e7-3892-48aa-ac76-3d8719df8169
+langcode: ru
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_fullwidth
+field_name: field_fullwidth
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

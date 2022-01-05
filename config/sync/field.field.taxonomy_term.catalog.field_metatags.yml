@@ -1,0 +1,21 @@
+uuid: aa126d19-fc5d-4712-b960-1a1fbc62243f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_metatags
+    - taxonomy.vocabulary.catalog
+  module:
+    - metatag
+id: taxonomy_term.catalog.field_metatags
+field_name: field_metatags
+entity_type: taxonomy_term
+bundle: catalog
+label: Metatags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

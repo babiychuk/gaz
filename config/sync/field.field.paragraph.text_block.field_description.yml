@@ -1,0 +1,21 @@
+uuid: 88e44e68-1cec-41c5-b8b6-b4e273216b92
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.text_block
+  module:
+    - text
+id: paragraph.text_block.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: text_block
+label: Содержимое
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

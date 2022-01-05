@@ -1,0 +1,20 @@
+uuid: fc69300f-dfe2-4333-a179-c7faffe53a95
+langcode: uk
+status: true
+dependencies:
+  config:
+    - media.type.image
+id: media.image.name
+field_name: name
+entity_type: media
+bundle: image
+label: 'Назва (ім''я)'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

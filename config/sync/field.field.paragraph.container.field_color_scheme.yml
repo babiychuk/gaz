@@ -1,0 +1,23 @@
+uuid: e7cc9b25-2a2a-4f4d-8ba8-4828bb7b1791
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color_scheme
+    - paragraphs.paragraphs_type.container
+  module:
+    - options
+id: paragraph.container.field_color_scheme
+field_name: field_color_scheme
+entity_type: paragraph
+bundle: container
+label: 'Цветовая схема'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: white
+default_value_callback: ''
+settings: {  }
+field_type: list_string

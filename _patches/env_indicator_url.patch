@@ -1,0 +1,13 @@
+diff --git a/environment_indicator.module b/environment_indicator.module
+index 3d57dde..775e54c 100644
+--- a/environment_indicator.module
++++ b/environment_indicator.module
+@@ -284,7 +284,7 @@ function _environment_indicator_switcher_links() {
+     return [];
+   }
+   $current = \Drupal\Core\Url::fromRoute('<current>');
+-  $current_path = $current->toString();
++  $current_path = $current->getInternalPath();
+   return array_map(function (EnvironmentIndicator $entity) use ($current_path) {
+     return [
+       'attributes' => [

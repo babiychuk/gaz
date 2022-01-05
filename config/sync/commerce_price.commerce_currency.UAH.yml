@@ -1,0 +1,9 @@
+uuid: bed5ef0b-e6ef-44d3-8948-1601a96de0b1
+langcode: ru
+status: true
+dependencies: {  }
+currencyCode: UAH
+name: 'украинская гривна'
+numericCode: '980'
+symbol: ₴
+fractionDigits: 2

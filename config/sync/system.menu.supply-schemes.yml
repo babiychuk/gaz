@@ -1,0 +1,8 @@
+uuid: 67659a87-decd-421c-845b-107433da276d
+langcode: und
+status: true
+dependencies: {  }
+id: supply-schemes
+label: 'Схеми газопостачання подвал'
+description: ''
+locked: false

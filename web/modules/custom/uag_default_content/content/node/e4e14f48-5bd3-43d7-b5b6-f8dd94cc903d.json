@@ -1,0 +1,191 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/ru.gaz.local\/home?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/page_builder"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/page_builder\/revision_uid": [
+            {
+                "href": "http:\/\/en.gaz.local\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page_builder\/uid": [
+            {
+                "href": "http:\/\/en.gaz.local\/user\/1?_format=hal_json",
+                "lang": "ru"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page_builder\/field_paragraphs": [
+            {
+                "href": ""
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 1333
+        }
+    ],
+    "uuid": [
+        {
+            "value": "e4e14f48-5bd3-43d7-b5b6-f8dd94cc903d"
+        }
+    ],
+    "vid": [
+        {
+            "value": 1340
+        }
+    ],
+    "langcode": [
+        {
+            "value": "ru",
+            "lang": "ru"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "page_builder"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2018-06-27T12:54:40+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/page_builder\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/en.gaz.local\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "a697291c-226a-4bb7-8c3d-0e48b469c60c"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page_builder\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/en.gaz.local\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "a697291c-226a-4bb7-8c3d-0e48b469c60c"
+                    }
+                ],
+                "lang": "ru"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page_builder\/field_paragraphs": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/from_library"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "3e2cf627-00c0-4657-9af5-b1b5dd6240f5"
+                    }
+                ],
+                "target_revision_id": "5"
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "ru"
+        }
+    ],
+    "title": [
+        {
+            "value": "\u0413\u043b\u0430\u0432\u043d\u0430\u044f",
+            "lang": "ru"
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-06-27T12:26:43+00:00",
+            "lang": "ru",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-06-27T12:54:40+00:00",
+            "lang": "ru",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": false,
+            "lang": "ru"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "ru"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "ru"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "ru"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "\u0413\u043b\u0430\u0432\u043d\u0430\u044f | \u0423\u043a\u0440\u0430\u0432\u0442\u043e\u043d\u043e\u043c\u0433\u0430\u0437",
+                "canonical_url": "http:\/\/gaz.local\/node\/1333"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/home",
+            "pid": 3731,
+            "langcode": "ru",
+            "lang": "ru"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "ru"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "ru"
+        }
+    ]
+}

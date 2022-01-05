@@ -1,0 +1,9 @@
+uuid: 76d0c222-a694-4371-99b8-d057ac51b36d
+langcode: ru
+status: true
+dependencies: {  }
+id: faq_question
+label: 'Вопрос ЧаВо'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

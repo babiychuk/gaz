@@ -1,0 +1,10 @@
+uuid: d2ef5072-679d-4ef8-95fe-5175afa15f80
+langcode: ru
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.tab_title
+label: 'Tab title'
+targetEntityType: paragraph
+cache: true

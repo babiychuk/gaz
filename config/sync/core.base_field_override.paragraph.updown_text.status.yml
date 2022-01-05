@@ -1,0 +1,22 @@
+uuid: 8341649b-8063-4713-8731-7611f5a7f2c8
+langcode: uk
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.updown_text
+id: paragraph.updown_text.status
+field_name: status
+entity_type: paragraph
+bundle: updown_text
+label: Опубліковано
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

@@ -1,0 +1,23 @@
+uuid: 9a1513ed-d0b7-4cee-b422-7455b5d348af
+langcode: uk
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: shop_category
+label: 'Shop category'
+type: 'canonical_entities:taxonomy_term'
+pattern: '[uag_store:shop_root_node:url:path]/[term:parents:join-path]/[term:name]'
+selection_criteria:
+  3d06b7bf-2bc3-48b9-a6cc-86451bf6e669:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      catalog: catalog
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 3d06b7bf-2bc3-48b9-a6cc-86451bf6e669
+selection_logic: and
+weight: -5
+relationships: {  }

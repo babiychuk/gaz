@@ -1,0 +1,74 @@
+uuid: c22f8380-123d-4f5a-a99f-8351503cef54
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.faq
+    - paragraphs.paragraphs_type.faq_question
+  module:
+    - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.faq.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: faq
+label: Вопросы
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      faq_question: faq_question
+    target_bundles_drag_drop:
+      faq:
+        weight: 14
+        enabled: false
+      faq_question:
+        enabled: true
+        weight: 15
+      card_mini:
+        weight: 15
+        enabled: false
+      container:
+        weight: 16
+        enabled: false
+      from_library:
+        weight: 17
+        enabled: false
+      linked_image:
+        weight: 18
+        enabled: false
+      media:
+        weight: 19
+        enabled: false
+      supply_schemes_block:
+        weight: 20
+        enabled: false
+      tab_card:
+        weight: 21
+        enabled: false
+      tabbed_cards:
+        weight: 22
+        enabled: false
+      text_block:
+        weight: 23
+        enabled: false
+      updown_text:
+        weight: 24
+        enabled: false
+      view:
+        weight: 25
+        enabled: false
+      write_about_us:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions

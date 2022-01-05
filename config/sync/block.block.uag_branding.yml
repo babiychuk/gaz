@@ -1,0 +1,25 @@
+uuid: 9d33d13c-197b-4505-9bbe-9bb545f27d67
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - uag
+_core:
+  default_config_hash: fRKXNB91UxDvEMkzCR8ZBsawfC6Fqbme2gtobei3gu4
+id: uag_branding
+theme: uag
+region: navigation
+weight: -4
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Брендинг сайта'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

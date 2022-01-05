@@ -1,0 +1,16 @@
+{
+  "root" : true,
+  "extends": "eslint:recommended",
+  "globals": {
+    "Drupal": true,
+    "drupalSettings": true,
+    "drupalTranslations": true,
+    "domready": true,
+    "jQuery": true,
+    "_": true,
+    "matchMedia": true,
+    "Backbone": true,
+    "Modernizr": true,
+    "CKEDITOR": true
+  }
+}

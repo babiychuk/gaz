@@ -1,0 +1,18 @@
+uuid: 3c18f100-136a-486c-aeca-22cb67c1d3b5
+langcode: uk
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.supply_schemes_block
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.supply_schemes_block
+target_entity_type_id: paragraph
+target_bundle: supply_schemes_block
+default_langcode: site_default
+language_alterable: false

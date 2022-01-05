@@ -1,0 +1,54 @@
+uuid: ccf3f1a4-6764-47cc-b9e5-504163edde45
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.media_entity_browser
+  module:
+    - entity_browser_entity_form
+    - views
+_core:
+  default_config_hash: UoGZLPH_DEy28wDjCYqiBKYsKoHlf6l6deygJjqdgPc
+name: media_entity_browser
+label: 'Media Entity Browser'
+display: modal
+display_configuration:
+  width: '1070'
+  height: '840'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  6586703a-6976-4124-8a49-cbb07ceaa3b1:
+    settings:
+      view: media_entity_browser
+      view_display: entity_browser_1
+      submit_text: 'Select entities'
+      auto_select: false
+    uuid: 6586703a-6976-4124-8a49-cbb07ceaa3b1
+    weight: 1
+    label: view
+    id: view
+  99bd6411-519b-44a6-bbd5-2e6e8cb2c243:
+    settings:
+      entity_type: media
+      bundle: embed_video
+      form_mode: default
+      submit_text: 'Сохранить видео'
+    uuid: 99bd6411-519b-44a6-bbd5-2e6e8cb2c243
+    weight: 2
+    label: 'Добавить видео'
+    id: entity_form
+  b74173b7-ba9f-4a01-a279-5981d78a1d17:
+    settings:
+      entity_type: media
+      bundle: image
+      form_mode: default
+      submit_text: 'Сохранить изображение'
+    uuid: b74173b7-ba9f-4a01-a279-5981d78a1d17
+    weight: 3
+    label: 'Добавить изображение'
+    id: entity_form

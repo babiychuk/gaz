@@ -1,0 +1,9 @@
+uuid: e22e4cea-3ff7-41f2-9040-64c53cf85f36
+langcode: ru
+status: true
+dependencies: {  }
+id: tab_card
+label: 'Tab card'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

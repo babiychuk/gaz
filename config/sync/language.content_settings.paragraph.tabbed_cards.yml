@@ -1,0 +1,18 @@
+uuid: 2c3b4b65-397c-4fc9-b9c2-1e82f4ecbb66
+langcode: uk
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.tabbed_cards
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.tabbed_cards
+target_entity_type_id: paragraph
+target_bundle: tabbed_cards
+default_langcode: site_default
+language_alterable: true

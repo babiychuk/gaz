@@ -1,0 +1,20 @@
+uuid: ed7aa776-58c4-4e47-b2f0-bc2f02212db9
+langcode: uk
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.tabbed_cards
+id: paragraph.tabbed_cards.uid
+field_name: uid
+entity_type: paragraph
+bundle: tabbed_cards
+label: Автор
+description: 'The user ID of the paragraphs author.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: 'Drupal\paragraphs\Entity\Paragraph::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

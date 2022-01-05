@@ -1,0 +1,16 @@
+uuid: 4b678ef7-5716-440e-8205-c2d2f67cad6d
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Анонімний користувач'
+weight: 0
+is_admin: false
+permissions:
+  - 'access checkout'
+  - 'access content'
+  - 'use text format restricted_html'
+  - 'view commerce_product'
+  - 'view media'

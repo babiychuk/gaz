@@ -1,0 +1,35 @@
+uuid: 19df929c-6dd2-4cd5-8e9e-4bc0d6ae4154
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.post_preview
+    - field.field.media.image.field_media_image
+    - image.style.post_preview
+    - media.type.image
+  module:
+    - svg_image
+id: media.image.post_preview
+targetEntityType: media
+bundle: image
+mode: post_preview
+content:
+  field_media_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: post_preview
+      image_link: ''
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: 0
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

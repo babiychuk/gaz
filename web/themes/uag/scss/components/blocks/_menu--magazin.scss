@@ -1,0 +1,71 @@
+.block.menu--magazin {
+  border: 2px solid $c_primary;
+  margin-bottom: gutter();
+
+  h2 {
+    background-color: $c_primary;
+    color: $c_white;
+    text-align: center;
+    padding: .5em;
+    margin: 0;
+
+    &::before {
+      @include uag-fa-icon($fa-var-bars);
+
+      margin-right: .25em;
+    }
+  }
+
+  ul {
+    margin-left: 0;
+
+    li {
+      background-color: white;
+      color: $c_gray;
+      border-bottom: 2px solid $c_light_gray;
+      line-height: 1.25em;
+      padding: 0;
+
+      a {
+        display: block;
+        padding: .5em 1em .5em .5em;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &.menu-item--expanded,
+      &.menu-item--collapsed {
+        list-style: none none;
+        position: relative;
+
+        & > a::after {
+          @include uag-fa-icon($fa-var-chevron-left);
+
+          position: absolute;
+          top: 0.5em;
+          right: 0.5em;
+          line-height: 1.25em;
+        }
+      }
+
+      &.menu-item--expanded > a::after {
+        transform: rotate(-90deg);
+      }
+    }
+
+    //Submenu
+    ul {
+      //margin-right: -0.5em;
+      padding-left: 1em;
+
+      li {
+        border-bottom: none;
+        line-height: 1em;
+      }
+    }
+  }
+}

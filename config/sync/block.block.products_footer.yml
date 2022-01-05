@@ -1,0 +1,24 @@
+uuid: b277a80f-dfcf-4ab0-b942-ecd803fab414
+langcode: uk
+status: true
+dependencies:
+  config:
+    - system.menu.products
+  module:
+    - system
+  theme:
+    - uag
+id: products_footer
+theme: uag
+region: footer_col_3
+weight: -7
+provider: null
+plugin: 'system_menu_block:products'
+settings:
+  id: 'system_menu_block:products'
+  label: Товари
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: 6393e99d-0922-4425-a3e9-d4db0507272b
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2b97cb66-bf95-4d14-8009-dfeb9e667a58'
+  module:
+    - block_content
+  theme:
+    - uag
+id: header_contacts
+theme: uag
+region: header
+weight: -5
+provider: null
+plugin: 'block_content:2b97cb66-bf95-4d14-8009-dfeb9e667a58'
+settings:
+  id: 'block_content:2b97cb66-bf95-4d14-8009-dfeb9e667a58'
+  label: 'Контакты шапка'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

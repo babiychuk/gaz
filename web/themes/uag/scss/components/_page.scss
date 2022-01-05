@@ -1,0 +1,118 @@
+// Css related to page.html.twig
+.layout-container {
+  padding: 0;
+  margin: 0;
+
+  > header[role="banner"] {
+    background-color: $c_white;
+  }
+
+  > main {
+    @include container;
+
+    > .catalog-container {
+      display: flex;
+
+      > .region-catalog-side {
+        //Left
+        flex-basis: span(3 wide);
+      }
+
+      > .region-catalog-main {
+        //Right
+        flex-basis: span(9);
+        margin-left: gutter();
+      }
+    }
+  }
+
+  > .layout-banner {
+    background: $c_primary no-repeat center;
+    background-size: cover;
+    min-height: 300px;
+    color: $c_white;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-bottom: gutter();
+    //padding-bottom: 3em;
+
+    //TODO: We can remove this wrapper from html
+    .layout-banner-header {
+      margin-top: 0;
+      margin-bottom: auto;
+      //position: absolute;
+      //top: 0;
+      //left: 0;
+      //width: 100%;
+    }
+
+    > .region-hero {
+      @include container;
+
+      margin-bottom: auto;
+    }
+
+    .layout-banner-footer {
+      margin-top: auto;
+      margin-bottom: 0;
+      height: 3em;
+    }
+
+
+  }
+
+  > footer {
+    background-color: $c_primary;
+    color: white;
+
+    .footer-columns {
+      display: flex;
+      flex-flow: row wrap;
+
+      @include container;
+
+      > .region {
+        flex: 1;
+        margin-right: gutter();
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      // TODO: Move to separate file
+      .block {
+        > h2 {
+          text-transform: uppercase;
+          font-size: 1.25em;
+          margin: .5em 0;
+
+          a {
+            text-decoration: none;
+            color: inherit;
+
+            &:hover {
+              color: $c_light_blue;
+            }
+          }
+        }
+      }
+    }
+
+    > .region-footer {
+      @include container;
+
+      padding: 4rem 0;
+
+      .block {
+        > h2 {
+          text-transform: uppercase;
+          font-size: 1.25em;
+          margin: .5em 0;
+        }
+      }
+    }
+  }
+}

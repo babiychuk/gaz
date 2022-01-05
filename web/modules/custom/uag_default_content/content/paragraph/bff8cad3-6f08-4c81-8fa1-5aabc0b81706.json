@@ -1,0 +1,166 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/write_about_us"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/write_about_us\/uid": [
+            {
+                "href": "http:\/\/en.gaz.local\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/write_about_us\/revision_uid": [
+            {
+                "href": "http:\/\/en.gaz.local\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/write_about_us\/field_images": [
+            {
+                "href": "http:\/\/ru.gaz.local\/media\/1?_format=hal_json"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 1
+        }
+    ],
+    "uuid": [
+        {
+            "value": "bff8cad3-6f08-4c81-8fa1-5aabc0b81706"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 3
+        }
+    ],
+    "langcode": [
+        {
+            "value": "ru",
+            "lang": "ru"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "write_about_us"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/write_about_us\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/en.gaz.local\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "a697291c-226a-4bb7-8c3d-0e48b469c60c"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/write_about_us\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/en.gaz.local\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "a697291c-226a-4bb7-8c3d-0e48b469c60c"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/write_about_us\/field_images": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/ru.gaz.local\/media\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "655339d5-201a-42ee-be72-6b673fbd28a9"
+                    }
+                ]
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-06-27T12:26:58+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "1333"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_paragraphs"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": "a:0:{}"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "ru"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "ru"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "ru"
+        }
+    ],
+    "content_translation_changed": [
+        {
+            "value": "2018-06-27T12:34:52+00:00",
+            "lang": "ru",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "field_title": [
+        {
+            "value": "\u041e \u043d\u0430\u0441 \u043f\u0438\u0448\u0443\u0442",
+            "lang": "ru"
+        }
+    ]
+}

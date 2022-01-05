@@ -1,0 +1,30 @@
+uuid: 17753eb8-815d-4ed6-ae9b-79624b754cf0
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media
+    - media.type.embed_video
+    - media.type.image
+    - paragraphs.paragraphs_type.media
+id: paragraph.media.field_media
+field_name: field_media
+entity_type: paragraph
+bundle: media
+label: Медиа
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      embed_video: embed_video
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: embed_video
+field_type: entity_reference

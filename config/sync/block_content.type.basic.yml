@@ -1,0 +1,8 @@
+uuid: dd784225-6563-4281-bd43-ea271f359d8a
+langcode: ru
+status: true
+dependencies: {  }
+id: basic
+label: 'Простой блок'
+revision: 1
+description: 'Блок с форматированным текстом'

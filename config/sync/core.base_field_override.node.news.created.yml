@@ -1,0 +1,18 @@
+uuid: a025e581-401f-4260-aff6-7d1329949261
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.news
+id: node.news.created
+field_name: created
+entity_type: node
+bundle: news
+label: Створено
+description: 'Час створення матеріалу.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

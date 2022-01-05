@@ -1,0 +1,33 @@
+uuid: abe685e6-ec66-4580-890e-9c5333d3ca66
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.media.field_content_display_mode
+    - field.field.paragraph.media.field_css_class
+    - field.field.paragraph.media.field_css_id
+    - field.field.paragraph.media.field_media
+    - field.field.paragraph.media.field_media_placement
+    - paragraphs.paragraphs_type.media
+  module:
+    - entity_reference_display
+id: paragraph.media.default
+targetEntityType: paragraph
+bundle: media
+mode: default
+content:
+  field_media:
+    type: entity_reference_display_default
+    weight: 0
+    label: hidden
+    settings:
+      display_field: ''
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_content_display_mode: true
+  field_css_class: true
+  field_css_id: true
+  field_media_placement: true

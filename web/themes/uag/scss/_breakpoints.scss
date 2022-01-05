@@ -1,0 +1,11 @@
+$bp_mobile: 'all and (max-width: 767px)';
+$bp_small: 'all and (max-width: 992px) and (min-width: 767px)';
+$bp_medium: 'all and (max-width: 1024px) and (min-width: 993px)';
+$bp_large: 'all and (min-width: 1200px) and (min-width: 1025px)';
+
+$drupal-breakpoints: (
+  mobile: 'all and (max-width: 767px)',
+  small: 'all and (max-width: 992px) and (min-width: 767px)',
+  medium: 'all and (max-width: 1024px) and (min-width: 993px)',
+  large: 'all and (min-width: 1200px) and (min-width: 1025px)',
+);

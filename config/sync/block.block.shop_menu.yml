@@ -1,0 +1,35 @@
+uuid: 3c897685-9dab-4e76-a6cc-2c97ccee2dde
+langcode: ru
+status: false
+dependencies:
+  config:
+    - system.menu.magazin
+  module:
+    - system
+    - uag_store
+  theme:
+    - uag
+id: shop_menu
+theme: uag
+region: catalog_side
+weight: 0
+provider: null
+plugin: 'system_menu_block:magazin'
+settings:
+  id: 'system_menu_block:magazin'
+  label: Магазин
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility:
+  catalog_page_condition:
+    id: catalog_page_condition
+    catalog_root: 'yes'
+    catalog_category: 'yes'
+    catalog_product: 'yes'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+      term: '@taxonomy_term.taxonomy_term_route_context:term'
+      product: '@commerce_product.product_route_context:commerce_product'

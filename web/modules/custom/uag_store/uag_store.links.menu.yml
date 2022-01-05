@@ -1,0 +1,7 @@
+uag_store.store_settings_form:
+  title: 'UAG Store settings'
+  route_name: uag_store.store_settings_form
+  description: 'A description for the menu entry'
+  parent: system.admin_config_system
+  weight: 99
+

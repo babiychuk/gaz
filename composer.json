@@ -1,0 +1,186 @@
+{
+    "name": "drupal-composer/drupal-project",
+    "description": "Project template for Drupal 8 projects with composer",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "",
+            "role": ""
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "require": {
+        "bower-asset/jquery-ui-slider-pips": "^1.11",
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6",
+        "drupal-composer/drupal-scaffold": "^2.2",
+        "drupal/admin_toolbar": "^1.24",
+        "drupal/blazy": "^1.0@RC",
+        "drupal/block_field": "^1.0@alpha",
+        "drupal/charts": "^3.0",
+        "drupal/color_field": "^2.0",
+        "drupal/colorbox": "^1.4",
+        "drupal/commerce": "^2.6",
+        "drupal/commerce_migrate": "2.x-dev",
+        "drupal/console": "^1.0.2",
+        "drupal/core": "~8.6.0",
+        "drupal/default_content": "^1.0@alpha",
+        "drupal/devel": "^1.2",
+        "drupal/draggableviews": "^1.0",
+        "drupal/easy_breadcrumb": "^1.8",
+        "drupal/editor_advanced_link": "^1.4",
+        "drupal/embed": "1.x-dev",
+        "drupal/entity_clone": "^1.0@alpha",
+        "drupal/entity_embed": "1.x-dev",
+        "drupal/entity_reference_display": "^1.2",
+        "drupal/entity_usage": "^2.0@alpha",
+        "drupal/environment_indicator": "3.x-dev",
+        "drupal/facets": "1.x-dev",
+        "drupal/field_group": "3.0-beta1",
+        "drupal/fontawesome": "^2.4 || 2.x-dev",
+        "drupal/fontawesome_menu_icons": "^1.3",
+        "drupal/image_widget_crop": "^2.2",
+        "drupal/inline_entity_form": "1.x-dev",
+        "drupal/linkit": "^5.0",
+        "drupal/material_admin": "^1.0@alpha",
+        "drupal/maxlength": "1.x-dev",
+        "drupal/media_entity_browser": "^2.0@alpha",
+        "drupal/menu_block": "^1.5",
+        "drupal/menu_position": "1.x-dev",
+        "drupal/metatag": "^1.5",
+        "drupal/migrate_file_to_media": "1.x-dev#4cbfd2a",
+        "drupal/migrate_google_sheets": "^1.0",
+        "drupal/migrate_plus": "4.x-dev",
+        "drupal/migrate_tools": "4.x-dev",
+        "drupal/nofollowlist": "^1.0",
+        "drupal/page_manager": "^4.0@beta",
+        "drupal/paragraphs": "^1.4||1.x-dev",
+        "drupal/pathauto": "^1.2",
+        "drupal/potx": "1.x-dev",
+        "drupal/redirect": "^1.2",
+        "drupal/search_api": "^1.9",
+        "drupal/search_api_solr": "2.x-dev",
+        "drupal/slick": "^1.0",
+        "drupal/slick_views": "^1.0@RC",
+        "drupal/social_media_links": "^2.6",
+        "drupal/svg_image": "^1.8",
+        "drupal/swiftmailer": "^1.0@beta",
+        "drupal/taxonomy_menu": "^3.3",
+        "drupal/taxonomy_menu_trails": "1.x-dev",
+        "drupal/tmgmt": "^1.6",
+        "drupal/twig_field_value": "^1.1",
+        "drupal/twig_tweak": "^2.1",
+        "drupal/video_embed_field": "^2.0 || 2.x-dev",
+        "drupal/viewsreference": "^2.0@alpha",
+        "drupal/webform": "^5.0@RC",
+        "drush/drush": "^9.0.0",
+        "npm-asset/blazy": "^1.8",
+        "npm-asset/chart.js": "^2.7",
+        "npm-asset/fontawesome-iconpicker": "^3.0",
+        "npm-asset/jquery-accessible-tabpanel-aria": "^1.6.1",
+        "npm-asset/jquery-colorbox": "^1.6",
+        "npm-asset/slick-carousel": "^1.8.0",
+        "oomphinc/composer-installers-extender": "^1.1",
+        "vlucas/phpdotenv": "^2.4",
+        "webflo/drupal-finder": "^1.0.0",
+        "webmozart/path-util": "^2.3"
+    },
+    "require-dev": {
+        "geerlingguy/drupal-vm": "^4.8",
+        "webflo/drupal-core-require-dev": "~8.6.0"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "discard-changes": true
+    },
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ],
+        "files": ["load.environment.php"]
+    },
+    "scripts": {
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
+    },
+    "extra": {
+        "installer-types": ["bower-asset", "npm-asset"],
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/slick": ["npm-asset/slick-carousel"],
+            "web/libraries/colorbox": ["npm-asset/jquery-colorbox"],
+            "web/libraries/chartjs": ["npm-asset/chart.js"],
+            "web/libraries/{$name}": ["type:drupal-library", "type:bower-asset", "type:npm-asset"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/contrib/{$name}": ["type:drupal-drush"]
+
+        },
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "patches": {
+            "drupal/core": {
+                "lang domain redirect": "https://www.drupal.org/files/issues/core-8.4.x-2643466-26.patch",
+                "Entity embed issue": "https://www.drupal.org/files/issues/2018-09-07/1988968-130.patch",
+                "Term route context": "https://www.drupal.org/files/issues/2018-10-17/term_route_context-2998826-17.patch"
+            },
+            "drupal/maxlength": {
+                "Softlimit": "https://www.drupal.org/files/issues/2018-09-06/maxlength-do_not_user_maxlength_attribute-1841028-13-reroll.patch"
+            },
+            "drupal/environment_indicator": {
+                "Env switcher urls": "_patches/env_indicator_url.patch",
+                "Env condition": "_patches/env_condition.patch"
+            },
+            "drupal/paragraphs": {
+                "Fix meterial admin": "https://www.drupal.org/files/issues/2018-07-10/Support-altered-dom-admin-theme-2984843-2.patch"
+            },
+            "drupal/inline_entity_form": {
+              "Fix collapsed paragraphs": "https://www.drupal.org/files/issues/2018-05-16/2901158-7.patch"
+            },
+            "drupal/entity_embed": {
+                "Fix media embed": "https://www.drupal.org/files/issues/2018-07-12/2820188-19.patch"
+            },
+            "drupal/pathauto": {
+                "Fix unused aliases": "https://www.drupal.org/files/issues/pathauto_prevents_core-path-handling-2881280-3.patch"
+            },
+            "drupal/taxonomy_menu_trails": {
+                "Any entity support": "https://www.drupal.org/files/issues/support-other-entity-types-2896477-3.patch"
+            },
+            "drupal/menu_block": {
+              "Block title": "https://www.drupal.org/files/issues/2018-10-26/menu_block-label_configuration-2809699-82.patch",
+              "block title link": "https://www.drupal.org/files/issues/2018-10-26/menu_block-title_as_link-2950943-11.patch"
+            },
+            "drupal/charts": {
+              "Library path": "https://www.drupal.org/files/issues/2018-10-31/charts_library_path_3.patch"
+            }
+        }
+    }
+}

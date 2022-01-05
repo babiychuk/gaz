@@ -1,0 +1,45 @@
+uuid: 1c474904-9682-4b78-a69f-c80a3b4e82d6
+langcode: ru
+status: true
+dependencies:
+  module:
+    - migrate_google_sheets
+id: gaz_custom_redirects
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - redirects
+migration_group: old_site
+label: 'Custom redirects'
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: google_sheets
+  urls: 'http://spreadsheets.google.com/feeds/list/1oEp-rA-xEZxntRKkCBxmUm-xXWUTkIf_0oLeftkpLdo/1/public/values?alt=json'
+  fields:
+    -
+      name: from_path
+      label: from
+      selector: frompath
+    -
+      name: to_uri
+      label: to
+      selector: touri
+  ids:
+    from_path:
+      type: string
+  constants:
+    status_code: 301
+  item_selector: /
+process:
+  redirect_source/path: from_path
+  redirect_redirect/uri:
+    plugin: link_uri
+    source: to_uri
+  status_code:
+    plugin: default_value
+    default_value: '301'
+destination:
+  plugin: 'entity:redirect'
+migration_dependencies: {  }

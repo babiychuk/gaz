@@ -1,0 +1,63 @@
+uuid: 0801e010-39df-4ba9-99de-fe3cc35b3de8
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.default
+    - core.entity_view_mode.commerce_product.catalog_item
+    - field.field.commerce_product.default.body
+    - field.field.commerce_product.default.field_category
+    - field.field.commerce_product.default.field_image
+    - field.field.commerce_product.default.field_metatags
+    - field.field.commerce_product.default.field_promoted
+    - field.field.commerce_product.default.stores
+    - field.field.commerce_product.default.variations
+    - image.style.catalog_item
+  module:
+    - commerce_product
+    - svg_image
+_core:
+  default_config_hash: gT03TFcuSod4d9uPQNs_gqK1F1QZ0Ray5CBYW0BNLnk
+id: commerce_product.default.catalog_item
+targetEntityType: commerce_product
+bundle: default
+mode: catalog_item
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: catalog_item
+      image_link: content
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: 0
+    third_party_settings: {  }
+    type: image
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: 1
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  variations:
+    type: commerce_add_to_cart
+    weight: 2
+    label: hidden
+    settings:
+      combine: true
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  created: true
+  field_category: true
+  field_metatags: true
+  field_promoted: true
+  langcode: true
+  stores: true
+  uid: true

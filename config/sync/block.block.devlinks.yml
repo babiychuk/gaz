@@ -1,0 +1,25 @@
+uuid: 9dd19656-dfce-46a8-bc22-6746deeb6aab
+langcode: uk
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:83aa88cf-0434-428a-9c39-1d067f882782'
+  module:
+    - block_content
+  theme:
+    - uag
+id: devlinks
+theme: uag
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:83aa88cf-0434-428a-9c39-1d067f882782'
+settings:
+  id: 'block_content:83aa88cf-0434-428a-9c39-1d067f882782'
+  label: 'Dev links'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

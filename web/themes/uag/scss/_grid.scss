@@ -1,0 +1,9 @@
+@import 'susy';
+@import 'plugins/svg-grid';
+
+$susy: (
+  'columns': susy-repeat(12),
+  'gutters': 1em,
+  'spread': 'narrow',
+  'container-spread': 'narrow',
+);

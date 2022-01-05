@@ -1,0 +1,42 @@
+uuid: 340189b5-23fc-499f-9246-d5b258484c19
+langcode: en
+status: true
+dependencies: {  }
+id: gaz_users
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: old_site
+label: 'Custom user migration'
+source:
+  plugin: gaz_migrate_users
+  key: migrate
+  constants:
+    hash_type_prefix: $MODX$
+    hash_salt_delimiter: /
+    timezone: Europe/Kiev
+process:
+  name: username
+  status: active
+  mail: email
+  roles:
+    plugin: static_map
+    source: sudo
+    map:
+      1: admin
+    bypass: true
+  lastlogin: lastlogin
+  created: lastlogin
+  init: email
+  pass:
+    plugin: concat
+    source:
+      - constants/hash_type_prefix
+      - password
+      - constants/hash_salt_delimiter
+      - salt
+  timezone: constants/timezone
+destination:
+  plugin: 'entity:user'
+migration_dependencies: null

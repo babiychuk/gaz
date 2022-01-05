@@ -1,0 +1,18 @@
+uuid: 7d54471f-3b85-4616-b894-beca9319cc19
+langcode: ru
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+id: paragraphs_library_item.paragraphs_library_item.created
+field_name: created
+entity_type: paragraphs_library_item
+bundle: paragraphs_library_item
+label: 'Время создания'
+description: 'The time that the library item was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

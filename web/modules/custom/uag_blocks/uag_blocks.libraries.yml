@@ -1,0 +1,31 @@
+block-calculator:
+  css:
+    component:
+      css/block-calculator.css: {}
+  js:
+    js/block-calculator.js: {}
+  dependencies:
+    - core/jquery.ui.slider
+    - core/jquery
+    - core/drupalSettings
+#    - uag_blocks/graphite
+    - charts_chartjs/charts_chartjs
+graphite:
+  js:
+    js/graphite.js: {}
+  dependencies:
+    - core/jquery
+block-objects-map:
+  css:
+    component:
+      css/block-objects-map.css: {}
+  js:
+    js/block-objects-map.js: {}
+  dependencies:
+    - core/jquery
+    - core/Drupal
+    - core/drupalSettings
+    - uag_libraries/jqvmap
+    - uag_libraries/jqvmap.ukraine
+
+

@@ -1,0 +1,62 @@
+track_enabled_base_fields: false
+local_task_enabled_entity_types:
+  - media
+  - paragraphs_library_item
+_core:
+  default_config_hash: D0RcOA_aIiwSPXOZSHQOTm5FXzziEsJHdfXGaF4nhIQ
+langcode: ru
+track_enabled_source_entity_types:
+  - block_content
+  - commerce_order
+  - commerce_order_item
+  - commerce_product_variation
+  - commerce_product
+  - commerce_product_attribute_value
+  - commerce_store
+  - media
+  - node
+  - paragraphs_library_item
+  - profile
+  - redirect
+  - search_api_task
+  - taxonomy_term
+  - tmgmt_job_item
+  - tmgmt_remote
+  - tmgmt_job
+  - tmgmt_message
+  - tmgmt_local_task_item
+  - tmgmt_local_task
+  - menu_link_content
+  - paragraph
+track_enabled_target_entity_types:
+  - block_content
+  - commerce_order
+  - commerce_order_item
+  - commerce_product_variation
+  - commerce_product
+  - commerce_product_attribute_value
+  - commerce_store
+  - media
+  - node
+  - paragraphs_library_item
+  - profile
+  - redirect
+  - search_api_task
+  - taxonomy_term
+  - tmgmt_job_item
+  - tmgmt_remote
+  - tmgmt_job
+  - tmgmt_message
+  - tmgmt_local_task_item
+  - tmgmt_local_task
+  - menu_link_content
+  - paragraph
+track_enabled_plugins:
+  - dynamic_entity_reference
+  - link
+  - linkit
+  - entity_reference
+  - entity_embed
+  - html_link
+  - block_field
+site_domains: {  }

@@ -1,0 +1,19 @@
+uuid: dab1898c-63ab-40e8-8449-a354c57c9b71
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_css_class
+    - paragraphs.paragraphs_type.container
+id: paragraph.container.field_css_class
+field_name: field_css_class
+entity_type: paragraph
+bundle: container
+label: CSS-класс
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

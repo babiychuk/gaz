@@ -1,0 +1,17 @@
+/* jqvmap places label in global html context */
+/*.uag-block-objects-map */
+.jqvmap-label {
+  background: #336692;
+  color: white;
+  width:150px;
+  border-radius: 6px;
+  padding: 6px;
+  position: absolute;
+  text-align:center;
+}
+
+/*.uag-block-objects-map */
+.jqvmap-zoomin {display: none;}
+
+/*.uag-block-objects-map */
+.jqvmap-zoomout {display: none;}

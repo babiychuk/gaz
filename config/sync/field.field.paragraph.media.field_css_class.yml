@@ -1,0 +1,24 @@
+uuid: 5e155f04-4d48-45b9-93c5-0a216b898395
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_css_class
+    - paragraphs.paragraphs_type.media
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.media.field_css_class
+field_name: field_css_class
+entity_type: paragraph
+bundle: media
+label: CSS-класс
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

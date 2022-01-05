@@ -1,0 +1,22 @@
+uuid: b8f6c43a-517d-4715-9a64-c6f4ffad1b06
+langcode: uk
+status: true
+dependencies:
+  config:
+    - media.type.embed_video
+id: media.embed_video.status
+field_name: status
+entity_type: media
+bundle: embed_video
+label: Опубліковано
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

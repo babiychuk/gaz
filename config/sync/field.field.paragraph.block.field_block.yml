@@ -1,0 +1,28 @@
+uuid: 44032f09-0578-40c3-b422-7712a6a75715
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block
+    - paragraphs.paragraphs_type.block
+  module:
+    - block_field
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.block.field_block
+field_name: field_block
+entity_type: paragraph
+bundle: block
+label: Block
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  plugin_ids:
+    calculator_block: calculator_block
+    uag_objects_map_block: uag_objects_map_block
+field_type: block_field

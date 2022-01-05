@@ -1,0 +1,28 @@
+.webform-submission-free-supplement-form {
+  max-width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+
+  #edit-flexbox {
+    display: flex;
+    justify-content: center;
+  }
+
+  #edit-inputs {
+    margin-right: gutter();
+  }
+
+  .form-item-message {
+    textarea {
+      min-height: 9em;
+    }
+  }
+
+  #edit-text {
+    text-align: center;
+  }
+
+  #edit-actions {
+    text-align: center;
+  }
+}

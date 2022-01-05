@@ -1,0 +1,29 @@
+uuid: 28a0780c-4cf5-45fd-b35a-a989fc7cae85
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.services
+  module:
+    - menu_block
+  theme:
+    - uag
+id: services
+theme: uag
+region: footer_col_5
+weight: 0
+provider: null
+plugin: 'menu_block:services'
+settings:
+  id: 'menu_block:services'
+  label: '<a href="https://ru.stage.ukravtonomgaz.ua/kalkulyatory">Калькуляторы</a>'
+  provider: menu_block
+  label_display: visible
+  level: 1
+  depth: 1
+  expand: 0
+  parent: 'services:menu_link_content:799735d1-3ffd-4308-9a83-60a9d7e5931a'
+  suggestion: services
+  label_type: fixed_parent
+  label_link: 1
+visibility: {  }

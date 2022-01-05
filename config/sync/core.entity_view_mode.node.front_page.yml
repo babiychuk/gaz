@@ -1,0 +1,10 @@
+uuid: b7c5dc87-853c-4997-8a65-f67c9bcae440
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: node.front_page
+label: 'Front page'
+targetEntityType: node
+cache: true

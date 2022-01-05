@@ -1,0 +1,20 @@
+uuid: 743e9bd2-d234-4b34-85ec-0345e165b6be
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - stark
+_core:
+  default_config_hash: PffmQ-ABSz5tFjWmVsR7NesunDnEivvopnJnBjl8KNE
+id: stark_local_actions
+theme: stark
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Основные действия администратора'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,14 @@
+{
+  "name": "drupal/uag_libraries",
+  "type": "drupal-module",
+  "description": "CSS/JS Libs definitions",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/uag_libraries",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/uag_libraries",
+    "source": "http://cgit.drupalcode.org/uag_libraries"
+  },
+  "require": { }
+}

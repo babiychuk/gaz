@@ -1,0 +1,19 @@
+uuid: 41ae6ceb-98ae-4059-9c70-a7e996724ed6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pediod
+    - paragraphs.paragraphs_type.tab_card
+id: paragraph.tab_card.field_pediod
+field_name: field_pediod
+entity_type: paragraph
+bundle: tab_card
+label: Период
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

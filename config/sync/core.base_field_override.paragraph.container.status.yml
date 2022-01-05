@@ -1,0 +1,22 @@
+uuid: a6f79aab-5b6f-4238-bf0a-e34b68de25c0
+langcode: uk
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.container
+id: paragraph.container.status
+field_name: status
+entity_type: paragraph
+bundle: container
+label: Опубліковано
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

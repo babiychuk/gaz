@@ -1,0 +1,14 @@
+uuid: a59d0ab9-c97a-4553-870c-2eabe19ac447
+langcode: ru
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: updown_text
+label: 'Updown text'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

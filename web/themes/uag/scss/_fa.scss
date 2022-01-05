@@ -1,0 +1,13 @@
+//@import 'font-awesome';
+
+//Font-awesome already on the page.
+@import "../node_modules/font-awesome/scss/variables";
+@import "../node_modules/font-awesome/scss/mixins";
+
+@mixin uag-fa-icon($icon) {
+  @include fa-icon;
+
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 800;
+  content: $icon;
+}

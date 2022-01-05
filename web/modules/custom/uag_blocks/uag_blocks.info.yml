@@ -1,0 +1,7 @@
+name: 'UAG blocks'
+type: module
+description: 'My Awesome Module'
+core: 8.x
+package: 'Custom'
+interface translation project: uag_blocks
+interface translation server pattern: modules/custom/uag_blocks/translations/%language.po

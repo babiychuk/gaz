@@ -1,0 +1,18 @@
+uuid: f1167f28-8570-46aa-ac3d-1610873ea3f9
+langcode: ru
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+id: paragraphs_library_item.paragraphs_library_item.label
+field_name: label
+entity_type: paragraphs_library_item
+bundle: paragraphs_library_item
+label: Label
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

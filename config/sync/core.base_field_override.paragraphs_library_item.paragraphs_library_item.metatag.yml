@@ -1,0 +1,18 @@
+uuid: 2fe7150c-da1d-4cd9-8e33-85ea2324f7f2
+langcode: ru
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+id: paragraphs_library_item.paragraphs_library_item.metatag
+field_name: metatag
+entity_type: paragraphs_library_item
+bundle: paragraphs_library_item
+label: Мета-теги
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

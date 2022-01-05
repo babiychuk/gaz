@@ -1,0 +1,20 @@
+.paragraph--type--card-mini.paragraph--view-mode--about-uag {
+  text-align: center;
+
+  .field--name-field-image {
+    width: 40%;
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  .field--name-field-description {
+    h3 {
+      font-weight: normal;
+    }
+
+    strong, b {
+      color: $c_light_blue;
+    }
+  }
+
+}

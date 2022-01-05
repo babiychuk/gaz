@@ -1,0 +1,29 @@
+uuid: 1b52997b-3a33-4f7a-84e9-02e726304188
+langcode: uk
+status: true
+dependencies:
+  config:
+    - system.menu.partnership
+  module:
+    - menu_block
+  theme:
+    - uag
+id: partnership_footer
+theme: uag
+region: footer_col_4
+weight: 3
+provider: null
+plugin: 'menu_block:partnership'
+settings:
+  id: 'system_menu_block:partnership'
+  label: Партнерам
+  provider: menu_block
+  label_display: visible
+  level: 1
+  depth: 1
+  expand: 0
+  parent: 'partnership:'
+  suggestion: partnership
+  label_type: block
+  label_link: 0
+visibility: {  }

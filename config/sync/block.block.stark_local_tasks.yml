@@ -1,0 +1,22 @@
+uuid: 45cb8139-8958-4d47-881b-1c73a94d3cb7
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - stark
+_core:
+  default_config_hash: c-06bbElRY5sKmglk74ppgTW93Et4-EJFyNiUZMb8JY
+id: stark_local_tasks
+theme: stark
+region: content
+weight: -20
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Вкладки
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

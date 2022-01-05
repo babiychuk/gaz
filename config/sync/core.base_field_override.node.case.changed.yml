@@ -1,0 +1,18 @@
+uuid: 7e7ac42e-628e-4ec2-8a89-1faac76db4c4
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.case
+id: node.case.changed
+field_name: changed
+entity_type: node
+bundle: case
+label: Змінено
+description: 'Час останнього редагування матеріалу.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

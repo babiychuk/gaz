@@ -1,0 +1,9 @@
+uuid: 2cf72d68-c692-4a66-a4cd-ed81afde8602
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_block__products__main_block
+name: 'search_api:views_block__products__main_block'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }

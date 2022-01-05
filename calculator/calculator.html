@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+
+	<meta charset="utf-8" />
+
+	<title>КАЛЬКУЛЯТОРИ</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/main.css" />
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+
+
+	
+	
+	<link href="css/SliderStyle.css" rel="stylesheet" type="text/css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+	<script src="js/sliderScript.js"></script>
+
+</head>
+
+<body>
+
+
+
+<!-- Графік-->
+<section> 
+	<div class="origin-clients " style="background-color:#fff"  >
+		<div class="container">	
+			<div class="row">
+				<div class="col-md-12 col-sm-12 block_title grey-color m20-0" >
+					Розрахуйте вартість 1 Гкал (грн. Квт)
+				</div>				
+			</div>
+			
+			<div class="row" style="margin:20px 0">
+				<div class="col-md-2 col-md-offset-1">	
+					<div class="grey-color" align="center"> <b>Пропан-бутан</b></div>
+					<img src="img/icon-calc-propan.png" width="100%" height="100%">
+					<div class="grey-color" style="text-align:center">Ціна (грн.)</div>
+					<input class="border-0" id="value_propan" style="    width: 100%; text-align:center" readonly>
+					<div id="main_propan">	<!-- top slider -->
+						<div id="slider_propan"></div> 
+					</div>
+				</div>	
+				<div class="col-md-2">
+					<div class="grey-color" align="center"> <b>Природний газ</b></div>
+					<img src="img/icon-calc-gaz.png" width="100%" height="100%">
+					<div class="grey-color" style="text-align:center">Ціна (грн.)</div>
+					<input class="border-0" id="value_gaz" style="    width: 100%; text-align:center"  readonly>
+					<div id="main_gaz">	<!-- top slider -->
+						<div id="slider_gaz"></div> 
+					</div>
+				</div>	
+				<div class="col-md-2">
+					<div class="grey-color" align="center"> <b>Дизельне паливо</b></div>
+					<img src="img/icon-calc-dizel.png" width="100%" height="100%">
+					<div class="grey-color" style="text-align:center">Ціна (грн.)</div>
+					<input class="border-0" id="value_dizel" style="    width: 100%; text-align:center"  readonly>
+					<div id="main_dizel">	<!-- top slider -->
+						<div id="slider_dizel"></div> 
+					</div>
+				</div>	
+				<div class="col-md-2">		
+					<div class="grey-color" align="center"> <b>Електроенергетика</b></div>
+					<img src="img/icon-calc-enegry.png" width="100%" height="100%">
+					<div class="grey-color" style="text-align:center">Ціна (грн.)</div>
+					<input class="border-0" id="value_enrj" style="    width: 100%; text-align:center"  readonly>
+					<div id="main_enrj">	<!-- top slider -->
+						<div id="slider_enrj"></div> 
+					</div>
+				</div>	
+				<div class="col-md-2">
+					<div class="grey-color" align="center"> <b>Пелети</b></div>
+					<img src="img/icon-calc-pellets.png" width="100%" height="100%">
+					<div class="grey-color" style="text-align:center">Ціна (грн.)</div>
+					<input class="border-0" id="value_pelet" style="    width: 100%; text-align:center"  readonly>
+					<div id="main_pelet">	<!-- top slider -->
+						<div id="slider_pelet"></div> 
+					</div>
+				</div>	
+				
+			</div>
+		
+	
+		</div>
+		
+		<div class="container">     
+			<div class="graph" id="example" style="margin-left: 50px;"></div>
+		</div>
+	</div>
+</section>
+
+<section class="m50-0" style="background-color:#476188">
+		<div class="container">
+			<div class="row" >
+				<div class="col-md-12" align="center" >
+					<p style="text-align:center; color:#fff;font-size: 40px;">Для тих, хто хоче детально розібратися в підрахунку</p>
+				</div>			
+			</div>		
+		</div>
+</section>
+
+	<div class="container">
+		<div class="row wrapper" >
+		<div id="block_boiler_output">
+			
+			<label>Укажите мощность котла в кВт <input type="text" id="boiler_output" name="boiler_output"  value="3500"  size="6" maxlength="6"></label>
+			
+		</div>
+		
+		
+		<p id="demo"></p>
+	<table id="table_calc"></table>
+
+	<div id="block_summ">
+		<span class="title">Стоимость топлива в год (грн)</span>
+		<span id="0_stoimost"></span>
+		<span id="1_stoimost"></span>
+		<span id="2_stoimost"></span>
+		<span id="3_stoimost"></span>
+		<span id="4_stoimost"></span>
+	</div>
+	
+	<div style="margin:20px 0 0;">
+		* Работа горелок на протяжении 12 часов в сутки 178 дней в году (6 месяцев), при загруженности горелок на 70%.<br>
+		** Эксплуатационные расходы в таблицу не включены.
+	</div>
+		
+		</div>
+	</div>
+
+
+	<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/graphite.js"></script>
+	<script src="js/calcTable.js"></script>
+	
+</body>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+		
+	
+</body>
+</html>

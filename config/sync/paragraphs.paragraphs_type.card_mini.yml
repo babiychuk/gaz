@@ -1,0 +1,14 @@
+uuid: 7db9d29c-ceef-4f66-b92a-731c7b9d945d
+langcode: ru
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: card_mini
+label: 'Карточка мини'
+icon_uuid: null
+description: 'Включает поля: изображение, заголовок, описание, ссылка.'
+behavior_plugins: {  }

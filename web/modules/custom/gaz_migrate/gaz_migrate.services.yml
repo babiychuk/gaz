@@ -1,0 +1,10 @@
+services:
+  password:
+    class: Drupal\gaz_migrate\MODxPasswordService
+    arguments: [16]
+  gaz_migrate.migrate_subscriber:
+    class: Drupal\gaz_migrate\MigrateSubscriber
+    tags:
+      - {name: event_subscriber}
+    arguments: [ '@database', '@entity_type.manager','@file.usage'
+     ]

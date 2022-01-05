@@ -1,0 +1,262 @@
+# $Id$
+#
+# LANGUAGE translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  uag_blocks.info.yml: n/a
+#  src/Plugin/Block/CalculatorBlock.php: n/a
+#  src/Plugin/Block/ObjectsMapBlock.php: n/a
+#  src/Plugin/Block/PostMetaInfo.php: n/a
+#  templates/uag-block-calculator.html.twig: n/a
+#  templates/uag-block-objects-map-region.html.twig: n/a
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2018-10-31 13:10+0200\n"
+"PO-Revision-Date: 2018-10-31 13:17+0200\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 2.0.3\n"
+"Last-Translator: \n"
+"Language: ru_RU\n"
+
+#: uag_blocks.info.yml:0
+msgid "UAG blocks"
+msgstr "Блоки УАГ"
+
+#: uag_blocks.info.yml:0
+msgid "My Awesome Module"
+msgstr ""
+
+#: uag_blocks.info.yml:0
+msgid "Custom"
+msgstr ""
+
+#: src/Plugin/Block/CalculatorBlock.php:29
+msgid "LPG"
+msgstr "Пропан-бутан"
+
+#: src/Plugin/Block/CalculatorBlock.php:34
+msgid "Natural gas"
+msgstr "Природний газ"
+
+#: src/Plugin/Block/CalculatorBlock.php:39
+msgid "Diesel"
+msgstr "Дизельное топливо"
+
+#: src/Plugin/Block/CalculatorBlock.php:44
+msgid "Electricity"
+msgstr "Электричество"
+
+#: src/Plugin/Block/CalculatorBlock.php:49
+msgid "Pellets"
+msgstr "Пеллеты"
+
+#: src/Plugin/Block/CalculatorBlock.php:66
+msgid "Calorific value (kW)"
+msgstr "Теплотворность (кВт)"
+
+#: src/Plugin/Block/CalculatorBlock.php:67
+msgid "Calorific value (Kcal)"
+msgstr "Теплотворность (ККал)"
+
+#: src/Plugin/Block/CalculatorBlock.php:68
+msgid "Boiler efficiency"
+msgstr "КПД котла"
+
+#: src/Plugin/Block/CalculatorBlock.php:69
+msgid "Maximum consumption per hour *"
+msgstr "Максимальный расход в час *"
+
+#: src/Plugin/Block/CalculatorBlock.php:70
+msgid "Nominal consumption per day"
+msgstr "Номинальный расход в сутки"
+
+#: src/Plugin/Block/CalculatorBlock.php:71
+msgid "Nominal consumption per month"
+msgstr "Номинальный расход в месяц"
+
+#: src/Plugin/Block/CalculatorBlock.php:72
+msgid "Nominal consumption per year *"
+msgstr "Номинальный расход в год *"
+
+#: src/Plugin/Block/CalculatorBlock.php:9
+msgid "Calculator block"
+msgstr "Блок калькулятора"
+
+#: src/Plugin/Block/ObjectsMapBlock.php:34
+msgid "Volyn Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:38
+msgid "Rivne Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:42
+msgid "Zhytomyr Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:46
+msgid "Kiev Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:50
+msgid "Chernihiv Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:54
+msgid "Sumy Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:58
+msgid "Lviv Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:62
+msgid "Ternopil Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:66
+msgid "Khmelnytskyi Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:70
+msgid "Vinnytsia Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:74
+msgid "Cherkasy Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:78
+msgid "Poltava Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:82
+msgid "Kharkiv Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:86
+msgid "Luhansk Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:90
+msgid "Zakarpattia Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:94
+msgid "Ivano-Frankivsk Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:98
+msgid "Chernivtsi Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:102
+msgid "Kirovohrad Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:106
+msgid "Dnipropetrovsk Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:110
+msgid "Donetsk Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:114
+msgid "Odessa Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:118
+msgid "Mykolaiv Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:122
+msgid "Kherson Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:126
+msgid "Zaporizhia Oblast"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:130
+msgid "AR Crimea"
+msgstr ""
+
+#: src/Plugin/Block/ObjectsMapBlock.php:7
+msgid "Objects map block"
+msgstr ""
+
+#: src/Plugin/Block/PostMetaInfo.php:94
+msgid "Published on @date"
+msgstr ""
+
+#: src/Plugin/Block/PostMetaInfo.php:12
+msgid "Post meta info"
+msgstr ""
+
+#: src/Plugin/Block/PostMetaInfo.php:12
+msgid "Current Node"
+msgstr ""
+
+#: templates/uag-block-calculator.html.twig:10
+msgid "Price (UAH)"
+msgstr "Цена (Грн)"
+
+#: templates/uag-block-calculator.html.twig:25
+msgid "For those who want to figure out in detail the count"
+msgstr "Для тех, кто хочет детально разобраться в подсчете"
+
+#: templates/uag-block-calculator.html.twig:34
+msgid "Specify the power of the boiler in kW"
+msgstr "Укажите мощность котла в кВт"
+
+#: templates/uag-block-calculator.html.twig:45
+msgid "name"
+msgstr "Наименование"
+
+#: templates/uag-block-calculator.html.twig:46
+msgid "Propane-butane (kg)"
+msgstr "Пропан-бутан (кг)"
+
+#: templates/uag-block-calculator.html.twig:47
+msgid "Natural gas (m3)"
+msgstr "Природный газ (куб/м)"
+
+#: templates/uag-block-calculator.html.twig:48
+msgid "Diesel (l)"
+msgstr "Дизтопливо (л)"
+
+#: templates/uag-block-calculator.html.twig:49
+msgid "Electricity (kWh)"
+msgstr "Электроенергия (кВт*ч)"
+
+#: templates/uag-block-calculator.html.twig:50
+msgid "Pellets (kg)"
+msgstr "Пеллеты (кг)"
+
+#: templates/uag-block-calculator.html.twig:71
+msgid "Fuel cost per year (UAH)"
+msgstr "Стоимость топлива в год (грн)"
+
+#: templates/uag-block-calculator.html.twig:86
+msgid ""
+"The work of the burners for 12 hours a day, 178 days a year (6 months), with "
+"a burner load of 70%."
+msgstr ""
+"Работа горелок на протяжении 12 часов в сутки, 178 дней в году (6 месяцев), "
+"при загруженности горелок на 70%."
+
+#: templates/uag-block-calculator.html.twig:89
+msgid "Operating expenses are not included in the table."
+msgstr "Эксплуатационные расходы в таблицу не включены."
+
+#: templates/uag-block-objects-map-region.html.twig:3
+msgid "Number of built objects is %objects"
+msgstr "Количество построенных объектов - %objects"

@@ -1,0 +1,8 @@
+uuid: 4cd8b2b4-945c-4760-89a6-96d8cc0bcfa7
+langcode: und
+status: true
+dependencies: {  }
+id: service
+label: Услуги
+description: ''
+locked: false

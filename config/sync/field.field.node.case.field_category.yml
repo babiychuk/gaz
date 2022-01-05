@@ -1,0 +1,21 @@
+uuid: c5c6dbf3-b102-4088-a3fb-e12f002a00c7
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category
+    - node.type.case
+id: node.case.field_category
+field_name: field_category
+entity_type: node
+bundle: case
+label: Category
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

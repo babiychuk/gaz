@@ -1,0 +1,10 @@
+uuid: 3557938f-e348-49e2-9d0a-8f0404f72101
+langcode: ru
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.hero_content_item
+label: 'Hero content item'
+targetEntityType: paragraph
+cache: true

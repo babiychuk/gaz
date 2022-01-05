@@ -1,0 +1,25 @@
+uuid: 579cd979-1841-4e39-bf59-5cf19c006fd1
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_answer
+    - paragraphs.paragraphs_type.faq_question
+  module:
+    - text
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.faq_question.field_answer
+field_name: field_answer
+entity_type: paragraph
+bundle: faq_question
+label: Ответ
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

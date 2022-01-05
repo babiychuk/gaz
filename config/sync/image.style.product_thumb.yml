@@ -1,0 +1,15 @@
+uuid: f891d301-3728-44af-895c-d3a6bd73257e
+langcode: uk
+status: true
+dependencies: {  }
+name: product_thumb
+label: 'Product thumb'
+effects:
+  d143801b-6b4d-473c-b2df-f33a4cffdd88:
+    uuid: d143801b-6b4d-473c-b2df-f33a4cffdd88
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 350
+      height: 180
+      anchor: center-center

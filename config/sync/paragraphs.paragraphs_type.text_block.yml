@@ -1,0 +1,14 @@
+uuid: c078ebf9-ab99-44ba-94da-ec1130e49a26
+langcode: ru
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: text_block
+label: 'Text block'
+icon_uuid: null
+description: 'Текстовый редактор'
+behavior_plugins: {  }

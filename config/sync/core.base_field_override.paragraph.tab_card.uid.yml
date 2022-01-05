@@ -1,0 +1,20 @@
+uuid: 324c3691-5dfc-40fe-912c-c8ee53402d6a
+langcode: uk
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.tab_card
+id: paragraph.tab_card.uid
+field_name: uid
+entity_type: paragraph
+bundle: tab_card
+label: Автор
+description: 'The user ID of the paragraphs author.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: 'Drupal\paragraphs\Entity\Paragraph::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

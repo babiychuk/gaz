@@ -1,0 +1,9 @@
+uuid: 99f9b718-f77b-400e-a8c4-a6079ef31c12
+langcode: ru
+status: true
+dependencies: {  }
+id: media
+label: Медиа
+icon_uuid: null
+description: 'Фото, видео и т.д.'
+behavior_plugins: {  }

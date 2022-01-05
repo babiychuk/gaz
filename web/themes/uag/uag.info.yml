@@ -1,0 +1,40 @@
+name: uag
+type: theme
+description: 'Ukravtonomgaz theme'
+package: Other
+core: 8.x
+libraries:
+  - uag/global
+  - uag/shop
+base theme: classy
+regions:
+  navigation: Navigation
+  header: Header
+  hero: Hero
+  header_bottom: Header bottom
+  preface: Preface
+  catalog_side: Catalog sidebar
+  catalog_main: Catalog main
+  content: Content
+  content_bottom: Content bottom
+  footer_col_1: Footer column 1
+  footer_col_2: Footer column 2
+  footer_col_3: Footer column 3
+  footer_col_4: Footer column 4
+  footer_col_5: Footer column 5
+  footer: Footer
+
+stylesheets-remove:
+#  - '@classy/css/components/menu.css'
+#  - '@classy/css/components/breadcrumb.css'
+ - '@core/assets/vendor/jquery.ui/themes/base/theme.css'
+ - 'core/assets/vendor/jquery.ui/themes/base/theme.css'
+#Using Classy as a base theme https://www.drupal.org/theme-guide/8/classy
+
+#ckeditor_stylesheets:
+#  - '@ckeditor/css/ckeditor-ifruage.css'
+#  - assets/css/editor.css
+interface translation project: uag
+interface translation server pattern: themes/uag/translations/%language.po
+
+

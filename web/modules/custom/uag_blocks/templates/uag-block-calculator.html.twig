@@ -1,0 +1,94 @@
+<div class="calculator-block">
+    {% block columnts %}
+    <div class="columns">
+        {% for slider_id, slider in sliders %}
+            <div class="col {{ 'slider-'~slider_id }}">
+                <div class="title">{{ slider.title }}</div>
+                <img src="{{ file_url(slider.img) }}" alt="{{ slider.title }}">
+                <div class="price">
+                    <label>
+                        <span>{{ 'Price (UAH)'|t }}</span>
+                        <input type="text" value="{{ slider.value }}" readonly>
+                    </label>
+                    <div class="slider"></div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    {% endblock %}
+    {% block graph %}
+        <canvas class="graph" width="400" height="100"></canvas>
+    {% endblock %}
+    {% block details_title %}
+      <div class="details-title">
+        <h3 class="details-title--inner">
+          {% trans %}For those who want to figure out in detail the count{% endtrans %}
+          {#Для тих, хто хоче детально розібратися в підрахунку#}
+        </h3>
+      </div>
+    {% endblock %}
+    {% block boiler_power %}
+    <div class="boiler_power">
+        <label>
+          {# TODO: Translate  #}
+          {% trans %}Specify the power of the boiler in kW{% endtrans %}
+            {#Укажите мощность котла в кВт#}
+            <input value="{{ boiler_power }}" class="boiler_output">
+        </label>
+    </div>
+    {% endblock %}
+    {% block table %}
+        <div>
+            <table class="storage">
+                <thead><tr>
+                    <th>№</th>
+                    <th>{{ 'name'|t }}</th> {# Наименование #}
+                    <th>{{ 'Propane-butane (kg)'|t }}</th> {# Пропан-бутан (кг) #}
+                    <th>{{ 'Natural gas (m3)'|t }}</th> {# Природный газ (куб/м) #}
+                    <th>{{ 'Diesel (l)'|t }}</th> {# Дизтопливо (л) #}
+                    <th>{{ 'Electricity (kWh)'|t }}</th> {# Электроенергия (кВт*ч) #}
+                    <th>{{ 'Pellets (kg)'|t }}</th> {# Пеллеты (кг) #}
+                </tr></thead>
+                <tbody>
+                {% for row_title in table_rows %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ row_title }}</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endblock %}
+    {% block summary %}
+    <div class="summary">
+        <h3>
+          {% trans %}Fuel cost per year (UAH){% endtrans %}
+          {#Стоимость топлива в год (грн)#}
+        </h3>
+        <ul class="summary">
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+        </ul>
+    </div>
+    {% endblock %}
+  {% block footer%}
+    <div class="footer">
+      <div>
+        * {% trans %}The work of the burners for 12 hours a day, 178 days a year (6 months), with a burner load of 70%.{% endtrans %}
+        {#Работа горелок на протяжении 12 часов в сутки, 178 дней в году (6 месяцев), при загруженности горелок на 70%.#}
+        <br />
+        ** {% trans %}Operating expenses are not included in the table.{% endtrans %}
+        {# Эксплуатационные расходы в таблицу не включены. #}
+      </div>
+    </div>
+  {% endblock %}
+</div>

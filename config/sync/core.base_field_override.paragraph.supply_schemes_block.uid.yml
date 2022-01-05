@@ -1,0 +1,20 @@
+uuid: 28bc338b-d698-4a4e-8ba6-bb9a4515a618
+langcode: uk
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.supply_schemes_block
+id: paragraph.supply_schemes_block.uid
+field_name: uid
+entity_type: paragraph
+bundle: supply_schemes_block
+label: Автор
+description: 'The user ID of the paragraphs author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\paragraphs\Entity\Paragraph::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

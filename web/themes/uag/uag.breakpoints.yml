@@ -1,0 +1,24 @@
+uag.mobile:
+  label: mobile
+  mediaQuery: 'all and (max-width: 767px)'
+  weight: 0
+  multipliers:
+    - 1x
+uag.small:
+  label: small
+  mediaQuery: 'all and (max-width: 992px) and (min-width: 767px)'
+  weight: 1
+  multipliers:
+    - 1x
+uag.medium:
+  label: medium
+  mediaQuery: 'all and (max-width: 1024px) and (min-width: 993px)'
+  weight: 2
+  multipliers:
+    - 1x
+uag.large:
+  label: large
+  mediaQuery: 'all and (min-width: 1200px) and (min-width: 1025px)'
+  weight: 3
+  multipliers:
+    - 1x

@@ -1,0 +1,12 @@
+uuid: e9c28a4e-051a-4b11-85e4-c48ba9cc4177
+langcode: uk
+status: true
+dependencies: {  }
+label: 'Post preview'
+id: post_preview
+description: ''
+aspect_ratio: '4:3'
+soft_limit_width: 400
+soft_limit_height: 300
+hard_limit_width: 200
+hard_limit_height: 150

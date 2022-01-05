@@ -1,0 +1,25 @@
+uuid: 48d6ce3e-ab52-4405-8f09-a060daf26e6a
+langcode: uk
+status: true
+dependencies:
+  config:
+    - crop.type.post_preview
+  module:
+    - crop
+name: post_preview_image_600
+label: 'Post preview image (600)'
+effects:
+  6552f672-a206-4461-9a72-7790300b96e0:
+    uuid: 6552f672-a206-4461-9a72-7790300b96e0
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: post_preview
+  a659b8df-0f97-4681-bb5e-ee0583fccdbf:
+    uuid: a659b8df-0f97-4681-bb5e-ee0583fccdbf
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 600
+      height: 450
+      anchor: center-center

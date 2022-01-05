@@ -1,0 +1,39 @@
+uuid: 4f91253e-3404-4f0a-91cc-3fe9f79aeaae
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.case.body
+    - field.field.node.case.field_category
+    - field.field.node.case.field_hero_background
+    - field.field.node.case.field_metatags
+    - field.field.node.case.field_paragraphs
+    - node.type.case
+  module:
+    - text
+    - user
+id: node.case.teaser
+targetEntityType: node
+bundle: case
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_category: true
+  field_hero_background: true
+  field_metatags: true
+  field_paragraphs: true
+  langcode: true

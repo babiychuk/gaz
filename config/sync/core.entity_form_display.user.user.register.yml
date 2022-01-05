@@ -1,0 +1,40 @@
+uuid: 46eec2bc-c528-493c-b8b1-2b9ab7569c75
+langcode: uk
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.register
+    - field.field.user.user.tmgmt_translation_skills
+  module:
+    - path
+    - tmgmt_language_combination
+    - user
+id: user.user.register
+targetEntityType: user
+bundle: user
+mode: register
+content:
+  account:
+    weight: -10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  language:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  tmgmt_translation_skills:
+    type: tmgmt_language_combination_default
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

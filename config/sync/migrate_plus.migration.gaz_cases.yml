@@ -1,0 +1,63 @@
+uuid: 24a7486e-b1b7-4838-970b-baf0c06a84d8
+langcode: ru
+status: true
+dependencies: {  }
+id: gaz_cases
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: content
+migration_group: old_site
+label: Cases
+source:
+  plugin: gaz_migrate_cases
+  key: migrate
+  constants:
+    body_format: basic_html
+    author: 1
+  context_key: web
+  isfolder: 0
+  published: 1
+process:
+  title: pagetitle
+  field_category:
+    -
+      plugin: migration
+      migration: gaz_content_categories
+      source: parent
+      no_stub: true
+  field_metatags:
+    -
+      plugin: gaz_process_build_metatag
+      source: metatags
+  body/value:
+    -
+      plugin: gaz_process_remove_tokens
+      source: content
+    -
+      plugin: gaz_process_get_inline_images
+      base_url: 'https://ukravtonomgaz.ua/'
+  body/format: constants/body_format
+  status:
+    plugin: default_value
+    default_value: 1
+  langcode:
+    plugin: default_value
+    default_value: ru
+  uid:
+    -
+      plugin: migration_lookup
+      migration: gaz_users
+      source: createdby
+    -
+      plugin: default_value
+      default_value: constants/author
+  created: createdon
+  changed: editedon
+destination:
+  plugin: 'entity:node'
+  default_bundle: case
+migration_dependencies:
+  required:
+    - gaz_content_categories
+    - gaz_users

@@ -1,0 +1,22 @@
+uuid: a1ab9f6c-56c7-4c5c-ac81-f5d0e33e195f
+langcode: uk
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.card_mini
+id: paragraph.card_mini.status
+field_name: status
+entity_type: paragraph
+bundle: card_mini
+label: Опубліковано
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

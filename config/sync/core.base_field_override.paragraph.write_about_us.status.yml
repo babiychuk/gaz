@@ -1,0 +1,22 @@
+uuid: 5f645878-5d4a-4acf-bdc1-413eeaa1162a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.write_about_us
+id: paragraph.write_about_us.status
+field_name: status
+entity_type: paragraph
+bundle: write_about_us
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Вкл
+  off_label: Выкл
+field_type: boolean

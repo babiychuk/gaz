@@ -1,0 +1,18 @@
+uuid: 2c4aca2f-a522-442a-b604-6d2c5ff5ac4a
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.case
+id: node.case.metatag
+field_name: metatag
+entity_type: node
+bundle: case
+label: Мета-теги
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

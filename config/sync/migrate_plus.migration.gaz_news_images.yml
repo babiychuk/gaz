@@ -1,0 +1,78 @@
+uuid: cbf69a21-2286-48cc-bc30-66a8f254bae8
+langcode: ru
+status: true
+dependencies: {  }
+id: gaz_news_images
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - content
+  - files
+migration_group: old_site
+label: News
+source:
+  plugin: gaz_migrate_news
+  key: migrate
+  constants:
+    body_format: basic_html
+    author: 1
+    file_dest_uri: 'public://news-images'
+    file_source_uri: 'https://ukravtonomgaz.ua'
+  skip_ids:
+    - 39
+    - 40
+    - 41
+    - 418
+    - 910
+    - 914
+  context_key: web
+  isfolder: 0
+  published: 1
+  not_null:
+    - var_image.value
+process:
+  file_source_path:
+    -
+      plugin: skip_on_empty
+      method: row
+      source: var_image
+  file_source:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/file_source_uri
+        - '@file_source_path'
+  file_name:
+    plugin: callback
+    callable: basename
+    source: var_image
+  file_dest:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/file_dest_uri
+        - '@file_name'
+    -
+      plugin: urlencode
+  filename: '@file_name'
+  uri:
+    -
+      plugin: download
+      rename: true
+      source:
+        - '@file_source'
+        - '@file_dest'
+  uid:
+    -
+      plugin: migration_lookup
+      migration: gaz_users
+      source: createdby
+    -
+      plugin: default_value
+      default_value: constants/author
+destination:
+  plugin: 'entity:file'
+migration_dependencies: {  }

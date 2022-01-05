@@ -1,0 +1,84 @@
+# This is shared config. To Override settings locally, use local.config.yml
+vagrant_hostname: gaz.local
+vagrant_machine_name: gaz.local
+#vagrant_memory: 2048
+
+php_version: "7.1"
+php_memory_limit: "1G"
+
+vagrant_synced_folders:
+  - local_path: "./vm"
+    destination: /var/www/drupalvm
+    type: nfs
+    create: true
+  - local_path: "./"
+    destination: /var/www/drupalvm/drupal
+    type: nfs
+    create: true
+
+apache_vhosts:
+  - servername: "{{ drupal_domain }}"
+    serveralias: "www.{{ drupal_domain }} ru.{{ drupal_domain }} uk.{{ drupal_domain }} en.{{ drupal_domain }}"
+    documentroot: "{{ drupal_core_path }}"
+    extra_parameters: "{{ apache_vhost_php_fpm_parameters }}"
+
+  - servername: "adminer.{{ vagrant_hostname }}"
+    documentroot: "{{ adminer_install_dir }}"
+    extra_parameters: "{{ apache_vhost_php_fpm_parameters }}"
+
+  - servername: "xhprof.{{ vagrant_hostname }}"
+    documentroot: "{{ php_xhprof_html_dir }}"
+    extra_parameters: "{{ apache_vhost_php_fpm_parameters }}"
+
+  - servername: "pimpmylog.{{ vagrant_hostname }}"
+    documentroot: "{{ pimpmylog_install_dir }}"
+    extra_parameters: "{{ apache_vhost_php_fpm_parameters }}"
+
+  - servername: "{{ vagrant_ip }}"
+    serveralias: "dashboard.{{ vagrant_hostname }}"
+    documentroot: "{{ dashboard_install_dir }}"
+    extra_parameters: "{{ apache_vhost_php_fpm_parameters }}"
+
+drupal_build_makefile: false
+drupal_build_composer: false
+drupal_build_composer_project: false
+drupal_install_site: false
+
+installed_extras:
+  - adminer
+  - drush
+  - drupalconsole
+  - nodejs
+  - xdebug
+  - pimpmylog
+  - upload-progress
+  - varnish
+  - mailhog
+  - solr
+  #- tideways
+extra_packages:
+- php7.1-bcmath
+- php7.1-zip
+
+solr_version: "7.1.0"
+solr_cores:
+  - d8
+post_provision_scripts:
+ - "{{ config_dir }}/../scripts/configure-solr.sh"
+
+firewall_state: stopped
+firewall_enabled_at_boot: false
+firewall_disable_firewalld: true
+firewall_disable_ufw: true
+
+nodejs_npm_global_packages:
+  - gulp
+
+mysql_databases:
+  - name: drupal
+  - name: old
+mysql_users:
+  - name: drupal
+    host: "%"
+    password: drupal
+    priv: "*.*:ALL"

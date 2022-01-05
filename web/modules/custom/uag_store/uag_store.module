@@ -1,0 +1,155 @@
+<?php
+
+/**
+ * @file
+ * Contains uag_store.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function uag_store_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the uag_store module.
+    case 'help.page.uag_store':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function uag_store_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+  if ($hook == 'page') {
+
+  }
+  return;
+  // $suggestions[] = $hook . '__' . \Drupal::languageManager()->getCurrentLanguage()->getId();
+}
+
+function uag_store_preprocess_page(&$vars) {
+  return;
+}
+
+/**
+ * Implements hook_token_info().
+ */
+function uag_store_token_info() {
+  return array(
+    'types' => array(
+      'uag_store' => array(
+        'name' => t('Store tokens'),
+        'description' => t('Global store values'),
+      )
+    ),
+    'tokens' => array(
+      'uag_store' => array(
+        'shop_vocab' => array(
+          'name' => t('Shop vocabulary'),
+          'description' => t('Taxonomy vocabulary that holds catalog structure.'),
+          'type' => 'vocabulary'
+        ),
+        'shop_root_node' => array(
+          'name' => t('Shop root node'),
+          'type' => 'node',
+        ),
+      )
+    ),
+  );
+}
+
+/**
+ * Implements hook_tokens().
+ *
+ * @param $type
+ * @param $tokens
+ * @param array $data
+ * @param array $options
+ * @param \Drupal\Core\Render\BubbleableMetadata $bubbleable_metadata
+ *
+ * @return array
+ */
+function uag_store_tokens($type, $tokens, array $data, array $options, \Drupal\Core\Render\BubbleableMetadata
+$bubbleable_metadata) {
+  $token_service = \Drupal::token();
+  /*
+  if (isset($options['langcode'])) {
+    $url_options['language'] = \Drupal::languageManager()
+      ->getLanguage($options['langcode']);
+    $langcode = $options['langcode'];
+  }
+  else {
+    $langcode = NULL;
+  } */
+  $replacements = array();
+
+  if ($type == 'uag_store') {
+    $config = \Drupal::config('uag_store.store_settings');
+    $em = \Drupal::entityTypeManager();
+    try {
+      $vocab = $em->getStorage('taxonomy_vocabulary')
+        ->load($config->get('catalog_vocabulary'));
+
+      $node = $em->getStorage('node')
+        ->load($config->get('root_catalog_page'));
+    } catch (\Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException $e) {
+      return $replacements;
+    } catch (\Drupal\Component\Plugin\Exception\PluginNotFoundException $e) {
+      return $replacements;
+    }
+
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'shop_vocab':
+          $replacements[$original] = $vocab;
+          break;
+
+        case 'shop_root_node':
+          $replacements[$original] = $node;
+          break;
+      }
+    }
+
+    if ($vocab_tokens = $token_service
+      ->findWithPrefix($tokens, 'shop_vocab')) {
+      $replacements = $token_service
+        ->generate('vocabulary', $vocab_tokens, array(
+          'vocabulary' => $vocab,
+        ), $options, $bubbleable_metadata);
+    }
+
+    if ($node_tokens = $token_service->findWithPrefix($tokens, 'shop_root_node')) {
+      $replacements = $token_service->generate('node', $node_tokens, array(
+        'node' => $node,
+      ), $options, $bubbleable_metadata);
+    }
+  }
+
+  return $replacements;
+}
+
+function uag_store_views_post_render(\Drupal\views\ViewExecutable $view, &$output, \Drupal\views\Plugin\views\cache\CachePluginBase $cache) {
+
+  // $output['#pre_render'][] = '_uag_store_views_more_link_process';
+}
+
+function _uag_store_views_more_link_process($elements) {
+  // /** @var \Drupal\Core\Path\AliasManagerInterface $aliasManager */
+  // $aliasManager = \Drupal::service('path.alias_manager');
+
+  // $more_url = $elements['#more']['#url'];
+  return $elements;
+}
+
+
+function uag_store_link_alter(&$variables) {
+  return;
+}
+
+function uag_store_preprocess_menu(&$variables) {
+  return;
+}

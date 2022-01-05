@@ -1,0 +1,36 @@
+uuid: 0fc9801a-6eeb-4151-8eb1-c4d5dc05a4ab
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.products
+  module:
+    - uag_store
+    - views
+  theme:
+    - uag
+id: views_block__products_category_block
+theme: uag
+region: catalog_main
+weight: 0
+provider: null
+plugin: 'views_block:products-category_block'
+settings:
+  id: 'views_block:products-category_block'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  catalog_page_condition:
+    id: catalog_page_condition
+    catalog_root: 'yes'
+    catalog_category: 'yes'
+    catalog_product: 'yes'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+      term: '@taxonomy_term.taxonomy_term_route_context:term'
+      product: '@commerce_product.product_route_context:commerce_product'

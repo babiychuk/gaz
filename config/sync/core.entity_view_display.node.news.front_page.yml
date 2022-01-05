@@ -1,0 +1,43 @@
+uuid: 35010593-50f1-48cc-9d76-b67531d58c70
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.front_page
+    - field.field.node.news.body
+    - field.field.node.news.field_hero_background
+    - field.field.node.news.field_image
+    - field.field.node.news.field_metatags
+    - image.style.post_preview
+    - node.type.news
+  module:
+    - svg_image
+    - user
+id: node.news.front_page
+targetEntityType: node
+bundle: news
+mode: front_page
+content:
+  field_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: post_preview
+      image_link: content
+      svg_render_as_image: '1'
+      svg_attributes:
+        width: ''
+        height: ''
+    third_party_settings: {  }
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_hero_background: true
+  field_metatags: true
+  langcode: true

@@ -1,0 +1,5 @@
+parameters:
+  session.storage.options:
+    cookie_domain: '.gaz.local'
+  twig.config:
+    debug: true

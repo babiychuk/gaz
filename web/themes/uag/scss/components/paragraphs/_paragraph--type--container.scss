@@ -1,0 +1,58 @@
+.paragraph--type--container {
+
+  // Sometimes we need to save shadows, etc.
+  overflow: hidden;
+  //.field--name-field-content {
+    //> .field__item {
+    //}
+  //}
+
+  &.paragraph-fullwidth {
+    > .field--name-field-title,
+    > .field--name-field-content {
+      @include container;
+    }
+  }
+
+  /*
+  &.paragraph-style--columns > .field--name-field-content {
+    display: flex;
+    flex-flow: row wrap;
+
+    > .field__item {
+      flex: 1;
+      margin: 1rem;
+    }
+  }
+  */
+
+  .field--name-field-content > .field__item > .paragraph {
+    padding: 1rem;
+  }
+
+  &.paragraph-style--columns > .field--name-field-content {
+    @supports (display: grid) {
+    }
+
+    display: flex;
+    flex-flow: row wrap;
+
+    > .field__item {
+      margin-right: gutter();
+      flex: 1;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  > .field--name-field-link {
+    text-align: center;
+    margin: 1rem 0;
+
+    a {
+      @include button-primary;
+    }
+  }
+}

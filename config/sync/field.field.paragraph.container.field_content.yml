@@ -1,0 +1,38 @@
+uuid: 6c464c4f-d5ec-46fc-bee2-0f2cfe050633
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.container
+  module:
+    - entity_reference_revisions
+id: paragraph.container.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: container
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      container:
+        weight: 5
+        enabled: false
+      from_library:
+        weight: 6
+        enabled: false
+      view:
+        weight: 7
+        enabled: false
+      write_about_us:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

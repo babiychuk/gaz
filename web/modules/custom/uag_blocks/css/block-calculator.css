@@ -1,0 +1,42 @@
+.js-calculator-block {
+
+}
+
+.calculator-block .columns {
+  display: flex;
+}
+
+.js-calculator-block .graph {
+  margin: 2.5em 0;
+}
+
+.js-calculator-block .tooltip,
+.js-calculator-block .tooltip_bottom {
+  position: absolute;
+  display: block;
+  top: -30px;
+  width: 31px;
+  height: 29px;
+  text-align: center;
+  color: #464646;
+  font: 16px Arial, sans-serif;
+}
+
+.js-calculator-block .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  cursor: e-resize;
+  background-color: #123456;
+  border-radius:50%;
+  outline: none;
+  top: -5px;
+  margin-left: -12px;
+}
+.js-calculator-block .ui-slider-range {
+  background-color: #858585;
+  position: absolute;
+  border: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 5%;
+}

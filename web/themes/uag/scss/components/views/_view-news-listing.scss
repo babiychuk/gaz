@@ -1,0 +1,32 @@
+.view-news-listing .views-row {
+  > .node--view-mode-category-listing {
+    background-color: $c_primary;
+    color: white;
+
+    .node__col_first,
+    .node__col_second {
+      padding: gutter();
+    }
+  }
+
+  &:nth-child(2n) {
+    > .node--view-mode-category-listing {
+      background-color: transparent;
+      color: inherit;
+
+      .node__content .node__col_second {
+        order: 0;
+      }
+    }
+  }
+
+  .paragraph--type--view.paragraph-fullwidth & {
+    @include fullWidth;
+
+    > .node--view-mode-category-listing {
+      .node__content {
+        @include container;
+      }
+    }
+  }
+}

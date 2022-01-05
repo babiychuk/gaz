@@ -1,0 +1,8 @@
+uuid: c684bb2b-27e2-423c-8168-aa60f4372e28
+langcode: und
+status: true
+dependencies: {  }
+id: products
+label: Товари
+description: ''
+locked: false

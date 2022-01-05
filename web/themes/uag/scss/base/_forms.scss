@@ -1,0 +1,27 @@
+input,
+select,
+textarea {
+  max-width: 100%;
+}
+
+
+form {
+  .form-item {
+    label {
+      display: block;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      color: $c_gray;
+    }
+  }
+
+  .form-type-textfield,
+  .form-type-textarea,
+  .form-type-email,
+  .form-type-tel
+  {
+    width: 20em;
+  }
+}

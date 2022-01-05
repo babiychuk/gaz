@@ -1,0 +1,74 @@
+uuid: b1a74886-049d-48a2-b09b-0d58406b9b0a
+langcode: ru
+status: true
+dependencies: {  }
+id: gaz_services_images
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - content
+  - files
+migration_group: old_site
+label: 'Services images'
+source:
+  plugin: gaz_migrate_services
+  key: migrate
+  constants:
+    body_format: basic_html
+    author: 1
+    file_dest_uri: 'public://services-images'
+    file_source_uri: 'https://ukravtonomgaz.ua'
+  context_key: web
+  isfolder: 0
+  published: 1
+  not_null:
+    - var_image.value
+  skip_ids:
+    - 453
+    - 454
+process:
+  file_source_path:
+    -
+      plugin: skip_on_empty
+      method: row
+      source: var_image
+  file_source:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/file_source_uri
+        - '@file_source_path'
+  file_name:
+    plugin: callback
+    callable: basename
+    source: var_image
+  file_dest:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/file_dest_uri
+        - '@file_name'
+    -
+      plugin: urlencode
+  filename: image_filename
+  uri:
+    -
+      plugin: download
+      rename: true
+      source:
+        - '@file_source'
+        - '@file_dest'
+  uid:
+    -
+      plugin: migration_lookup
+      migration: gaz_users
+      source: createdby
+    -
+      plugin: default_value
+      default_value: constants/author
+destination:
+  plugin: 'entity:file'
+migration_dependencies: {  }

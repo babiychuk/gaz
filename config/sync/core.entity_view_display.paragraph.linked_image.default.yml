@@ -1,0 +1,37 @@
+uuid: 7191d4ad-e223-4397-a141-224a2a5d5ba1
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.linked_image.field_image
+    - field.field.paragraph.linked_image.field_link
+    - paragraphs.paragraphs_type.linked_image
+  module:
+    - link
+id: paragraph.linked_image.default
+targetEntityType: paragraph
+bundle: linked_image
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

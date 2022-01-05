@@ -1,0 +1,45 @@
+uuid: 2e8df402-881d-4e19-b1cc-03aba49f8162
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.linked_image.field_image
+    - field.field.paragraph.linked_image.field_link
+    - paragraphs.paragraphs_type.linked_image
+  module:
+    - inline_entity_form
+    - link
+id: paragraph.linked_image.default
+targetEntityType: paragraph
+bundle: linked_image
+mode: default
+content:
+  field_image:
+    weight: 0
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+    third_party_settings: {  }
+    type: inline_entity_form_simple
+    region: content
+  field_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

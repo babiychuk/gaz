@@ -1,0 +1,18 @@
+uuid: 99bbbaa8-070f-413e-b952-a66e8a8416d0
+langcode: uk
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.category
+id: taxonomy_term.category.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: category
+label: Мета-теги
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

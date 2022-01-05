@@ -1,0 +1,10 @@
+uuid: f068c93c-e2d6-4394-be33-983b720940fc
+langcode: uk
+status: true
+dependencies:
+  module:
+    - media
+id: media.post_preview
+label: 'Post preview'
+targetEntityType: media
+cache: true

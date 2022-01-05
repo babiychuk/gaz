@@ -1,0 +1,16 @@
+uuid: 3439793e-803c-4206-8073-f73a52a9c4a7
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Авторизований користувач'
+weight: 1
+is_admin: false
+permissions:
+  - 'access checkout'
+  - 'access content'
+  - 'use text format restricted_html'
+  - 'view commerce_product'
+  - 'view media'

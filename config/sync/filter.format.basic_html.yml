@@ -1,0 +1,73 @@
+uuid: e9d6660f-50d3-4a86-a4ad-471018e135b5
+langcode: en
+status: true
+dependencies:
+  module:
+    - editor
+    - entity_embed
+    - linkit
+    - nofollowlist
+name: 'Basic HTML'
+format: basic_html
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<a href hreflang class="button button-red use-ajax" rel="nofollow" data-dialog-type data-dialog-options> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h1 id class="text-align-left text-align-center text-align-right"> <h2 id class="text-align-left text-align-center text-align-right"> <h3 id class="text-align-left text-align-center text-align-right"> <h4 id class="text-align-left text-align-center text-align-right"> <h5 id class="text-align-left text-align-center text-align-right"> <h6 id class="text-align-left text-align-center text-align-right"> <p class="text-align-left text-align-center text-align-right"> <br> <span class="fontawesome-* fa-* fas far fal"> <img src alt data-entity-type data-entity-uuid data-align data-caption width height> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button>'
+      filter_html_help: false
+      filter_html_nofollow: false
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: 7
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: true
+    weight: 8
+    settings: {  }
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: true
+    weight: 9
+    settings: {  }
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: 11
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
+  entity_embed:
+    id: entity_embed
+    provider: entity_embed
+    status: true
+    weight: 0
+    settings: {  }
+  nofollowlist:
+    id: nofollowlist
+    provider: nofollowlist
+    status: true
+    weight: 0
+    settings:
+      nofollowlist_option: white
+      nofollowlist_hosts: "gaz.local\r\nen.gaz.local\r\nru.gaz.local\r\nstage.ukravtonomgaz.ua\r\nen.stage.ukravtonomgaz.ua\r\nru.stage.ukravtonomgaz.ua\r\ndev.ukravtonomgaz.ua\r\nen.dev.ukravtonomgaz.ua\r\nru.dev.ukravtonomgaz.ua\r\n"
+  linkit:
+    id: linkit
+    provider: linkit
+    status: false
+    weight: 0
+    settings:
+      title: false

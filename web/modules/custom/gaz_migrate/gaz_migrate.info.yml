@@ -1,0 +1,9 @@
+name: 'gaz_migrate'
+type: module
+description: 'GAZ migration module'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - migrate
+  - migrate_plus
+  - migrate_tools

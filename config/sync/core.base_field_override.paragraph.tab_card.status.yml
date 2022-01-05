@@ -1,0 +1,22 @@
+uuid: ae0ef218-f20f-4aa1-bdd2-1ccf01460967
+langcode: uk
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.tab_card
+id: paragraph.tab_card.status
+field_name: status
+entity_type: paragraph
+bundle: tab_card
+label: Опубліковано
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

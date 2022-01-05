@@ -1,0 +1,10 @@
+uuid: 959eb4c2-2b96-4238-8da6-51eca398fdbb
+langcode: ru
+status: true
+dependencies: {  }
+id: old_site
+label: 'Old site'
+description: ''
+source_type: modX
+module: null
+shared_configuration: null

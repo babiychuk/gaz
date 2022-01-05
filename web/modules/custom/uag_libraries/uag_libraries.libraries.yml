@@ -1,0 +1,22 @@
+tabpanel:
+  version: 1.x
+  js:
+    /libraries/jquery-accessible-tabpanel-aria/jquery-accessible-tabs.js: {}
+  dependencies:
+    - core/jquery
+# TODO: use composer when it possible
+jqvmap:
+  version: 1.5
+  js:
+    jqvmap/jquery.vmap.min.js: { minified: true }
+  css:
+    component:
+      jqvmap/jqvmap.min.css: {}
+  dependencies:
+    - core/jquery
+jqvmap.ukraine:
+  js:
+    jqvmap/maps/jquery.vmap.ukraine.js: {}
+  dependencies:
+    - uag_libraries/jqvmap
+

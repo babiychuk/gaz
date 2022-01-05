@@ -1,0 +1,102 @@
+uuid: cd18d417-6c67-4ea1-94a0-ea8cadeca737
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.page_builder
+    - paragraphs.paragraphs_type.block
+    - paragraphs.paragraphs_type.container
+    - paragraphs.paragraphs_type.faq
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.linked_image
+    - paragraphs.paragraphs_type.media
+    - paragraphs.paragraphs_type.supply_schemes_block
+    - paragraphs.paragraphs_type.tabbed_cards
+    - paragraphs.paragraphs_type.text_block
+    - paragraphs.paragraphs_type.view
+    - paragraphs.paragraphs_type.webform
+    - paragraphs.paragraphs_type.write_about_us
+  module:
+    - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.page_builder.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: page_builder
+label: Параграфы
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      from_library: from_library
+      write_about_us: write_about_us
+      text_block: text_block
+      block: block
+      view: view
+      container: container
+      faq: faq
+      linked_image: linked_image
+      media: media
+      supply_schemes_block: supply_schemes_block
+      tabbed_cards: tabbed_cards
+      webform: webform
+    target_bundles_drag_drop:
+      from_library:
+        enabled: true
+        weight: 3
+      write_about_us:
+        enabled: true
+        weight: 4
+      card_mini:
+        weight: 14
+        enabled: false
+      text_block:
+        enabled: true
+        weight: 15
+      block:
+        enabled: true
+        weight: 16
+      updown_text:
+        weight: 16
+        enabled: false
+      view:
+        enabled: true
+        weight: 17
+      container:
+        enabled: true
+        weight: 18
+      faq:
+        enabled: true
+        weight: 19
+      faq_question:
+        weight: 20
+        enabled: false
+      linked_image:
+        enabled: true
+        weight: 21
+      media:
+        enabled: true
+        weight: 22
+      supply_schemes_block:
+        enabled: true
+        weight: 23
+      tab_card:
+        weight: 24
+        enabled: false
+      tabbed_cards:
+        enabled: true
+        weight: 25
+      webform:
+        enabled: true
+        weight: 31
+field_type: entity_reference_revisions

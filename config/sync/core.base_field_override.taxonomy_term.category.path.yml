@@ -1,0 +1,20 @@
+uuid: f9035cd6-9c1a-4c6a-a73a-fcb2cc42aef8
+langcode: uk
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.category
+  module:
+    - path
+id: taxonomy_term.category.path
+field_name: path
+entity_type: taxonomy_term
+bundle: category
+label: URL-синонім
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * Implements hook_token_info().
+ */
+/**
+ * Implements hook_token_info().
+ */
+function uag_seo_extras_token_info() {
+  return array(
+    'tokens' => array(
+      'site' => array(
+        'news_node' => array(
+          'name' => t('News url'),
+          'description' => t('News page url (per language)'),
+          'type' => 'node',
+        ),
+      )
+    ),
+  );
+}
+
+/**
+ * @param $type
+ * @param $tokens
+ * @param array $data
+ * @param array $options
+ * @param \Drupal\Core\Render\BubbleableMetadata $bubbleable_metadata
+ *
+ * @return array
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ */
+function uag_seo_extras_tokens($type, $tokens, array $data, array $options, \Drupal\Core\Render\BubbleableMetadata
+$bubbleable_metadata) {
+  $token_service = \Drupal::token();
+  /*
+  if (isset($options['langcode'])) {
+    $url_options['language'] = \Drupal::languageManager()
+      ->getLanguage($options['langcode']);
+    $langcode = $options['langcode'];
+  }
+  else {
+    $langcode = NULL;
+  } */
+  $replacements = array();
+
+  if ($type == 'site') {
+    $config = \Drupal::config('uag_seo_extras.news_settings');
+    $nid = $config->get('news_node');
+    $em = \Drupal::entityTypeManager();
+    $node = $em->getStorage('node')->load($nid);
+
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'news_node':
+
+          if ($node) {
+            $replacements[$original] = $node;
+          }
+      }
+    }
+
+    if ($news_tokens = $token_service
+      ->findWithPrefix($tokens, 'news_node')) {
+      $replacements = $token_service
+        ->generate('node', $news_tokens, array(
+          'node' => $node,
+        ), $options, $bubbleable_metadata);
+    }
+  }
+
+  return $replacements;
+}

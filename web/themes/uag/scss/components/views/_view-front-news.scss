@@ -1,0 +1,15 @@
+.view-front-news {
+  > .view-content {
+    display: flex;
+    flex-flow: row;
+
+    > .views-row {
+      width: span(3);
+      margin-right: gutter();
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

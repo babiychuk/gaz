@@ -1,0 +1,7 @@
+uuid: 9eed5590-e067-4473-bf4d-fba9887b0a68
+langcode: ru
+status: true
+dependencies: {  }
+id: taxonomy_term__catalog
+label: 'Taxonomy term: Каталог'
+tags: {  }

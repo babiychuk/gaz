@@ -1,0 +1,69 @@
+.paragraph {
+  &.paragraph-fullwidth {
+    @include fullWidth;
+  }
+
+
+  &.paragraph-has-background {
+    position: relative;
+    overflow: hidden;
+    background-color: transparent !important; //Respect field_background.
+
+    > .field--name-field-background {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: stretch;
+
+      .field--name-field-media-image {
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .field--name-field-title {
+    text-align: center;
+    margin: 0.5em;
+  }
+
+  &#faq {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &#gas_delivery {
+    background-color: $c_primary;
+    color: $c_white;
+
+    .paragraph--type--container.paragraph-style--columns > .field--name-field-content > .field__item:first-child {
+      flex: 1.5;
+    }
+  }
+
+  &.paragraph-color-scheme-blue {
+    background-color: $c_primary;
+    color: $c_white;
+  }
+
+  &.paragraph-color-scheme-light_gray {
+    background-color: $c_white_2;
+    color: #6b8795; //That the color ?
+  }
+
+  &.paragraph-color-scheme-gray {
+    background-color: $c_gray;
+    color: white;
+  }
+}

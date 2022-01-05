@@ -1,0 +1,20 @@
+uuid: 0a2378ad-af6f-4b2e-8b7b-b0e1402d2db9
+langcode: uk
+status: true
+dependencies:
+  config:
+    - media.type.image
+id: media.image.uid
+field_name: uid
+entity_type: media
+bundle: image
+label: Автор
+description: 'Ідентифікатор користувача, що є автором.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,21 @@
+.node--type-news.node--view-mode-full {
+  max-width: 46em;
+  margin: 0 auto;
+
+  /* moved to custom block
+  .node__meta {
+    text-align: right;
+    background-color: $c_gray;
+    color: $c_white;
+    position: relative;
+    transform: translateY(-1.7em);
+    border: 2px solid $c_white;
+    padding: .5em;
+    font-size: 0.8em;
+  }
+  */
+
+  .node__content {
+    padding: 2em;
+  }
+}

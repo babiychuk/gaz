@@ -1,0 +1,5 @@
+name: 'UAG Libraries'
+type: module
+description: 'CSS/JS Libs definitions'
+core: 8.x
+package: 'Custom'

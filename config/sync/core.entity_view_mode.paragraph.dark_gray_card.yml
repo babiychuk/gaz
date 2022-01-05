@@ -1,0 +1,10 @@
+uuid: 0268702b-c5ec-415e-81a9-a12be4da46d8
+langcode: uk
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.dark_gray_card
+label: 'Dark gray card'
+targetEntityType: paragraph
+cache: true

@@ -1,0 +1,37 @@
+uuid: be73ac71-7606-41aa-8111-8f91a40f7fe8
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.webform.field_background
+    - field.field.paragraph.webform.field_color_scheme
+    - field.field.paragraph.webform.field_fullwidth
+    - field.field.paragraph.webform.field_webform
+    - paragraphs.paragraphs_type.webform
+  module:
+    - webform
+id: paragraph.webform.default
+targetEntityType: paragraph
+bundle: webform
+mode: default
+content:
+  field_background:
+    type: entity_reference_entity_view
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  field_webform:
+    weight: 0
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+hidden:
+  field_color_scheme: true
+  field_fullwidth: true

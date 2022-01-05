@@ -1,0 +1,22 @@
+uuid: 4be33958-b484-4936-af36-7318e8270a92
+langcode: uk
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.text_block
+id: paragraph.text_block.status
+field_name: status
+entity_type: paragraph
+bundle: text_block
+label: Опубліковано
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

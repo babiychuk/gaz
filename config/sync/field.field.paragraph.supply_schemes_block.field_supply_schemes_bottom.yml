@@ -1,0 +1,68 @@
+uuid: 1e68e281-a48f-4af3-9c3c-ea103dcc724c
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_supply_schemes_bottom
+    - paragraphs.paragraphs_type.card_mini
+    - paragraphs.paragraphs_type.supply_schemes_block
+  module:
+    - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.supply_schemes_block.field_supply_schemes_bottom
+field_name: field_supply_schemes_bottom
+entity_type: paragraph
+bundle: supply_schemes_block
+label: Bottom
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      card_mini: card_mini
+    target_bundles_drag_drop:
+      card_mini:
+        enabled: true
+        weight: 13
+      container:
+        weight: 14
+        enabled: false
+      from_library:
+        weight: 15
+        enabled: false
+      linked_image:
+        weight: 16
+        enabled: false
+      media:
+        weight: 17
+        enabled: false
+      supply_schemes_block:
+        weight: 18
+        enabled: false
+      tabbed_cards:
+        weight: 19
+        enabled: false
+      tab_card:
+        weight: 20
+        enabled: false
+      text_block:
+        weight: 21
+        enabled: false
+      updown_text:
+        weight: 22
+        enabled: false
+      view:
+        weight: 23
+        enabled: false
+      write_about_us:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,50 @@
+uuid: ecd857b6-cb6d-4f73-89e7-04517dfa9063
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.faq.field_content
+    - field.field.paragraph.faq.field_title
+    - paragraphs.paragraphs_type.faq
+  module:
+    - paragraphs
+id: paragraph.faq.default
+targetEntityType: paragraph
+bundle: faq
+mode: default
+content:
+  field_content:
+    weight: 1
+    settings:
+      title: Вопрос
+      title_plural: Вопросы
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: faq_question
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: add_above
+    third_party_settings: {  }
+    type: paragraphs
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

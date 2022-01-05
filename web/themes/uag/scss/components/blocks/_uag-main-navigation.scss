@@ -1,0 +1,16 @@
+#block-uag-main-navigation {
+  margin-left: auto;
+  margin-right: 0;
+  ul.menu {
+    margin: 0;
+
+    > li {
+      display: inline;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+}

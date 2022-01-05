@@ -1,0 +1,75 @@
+html, body {
+  font-size: 18px;
+  font-family: Roboto, sans-serif;
+  color: $c_gray;
+}
+
+//.reset-appearance
+//border: none;
+//margin: 0;
+//padding: 0;
+//width: auto;
+//overflow: visible;
+//
+//background: transparent;
+//
+///* inherit font & color from ancestor */
+//color: inherit;
+//font: inherit;
+//
+///* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+//line-height: normal;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+//  TODO!!
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 2em;
+  margin-bottom: .5rem;
+  font-weight: normal;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 1.25em;
+  margin-bottom: .5rem;
+  font-weight: normal;
+}
+
+.text-formatted {
+  ul, ol {
+    padding-left: 1em;
+  }
+}
+
+a.button {
+  @include button($c_primary, $c_white);
+}
+
+a.button-red {
+  @include button($c_white, $c_red);
+  border: none;
+}
+
+a.button-blue {
+  @include button($c_white, $c_primary);
+  border: 2px solid transparent;
+
+  &:hover {
+    border: 2px solid $c_primary;
+  }
+}
+
+button, input[type=button], input[type=submit] {
+  //@include reset-appearance;
+  @include button($c_primary, $c_white);
+}

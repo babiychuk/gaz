@@ -1,0 +1,30 @@
+uuid: 0ce87ad9-0112-450f-921b-066e4bbbb4e1
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image
+    - media.type.embed_video
+    - media.type.image
+    - paragraphs.paragraphs_type.card_mini
+id: paragraph.card_mini.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: card_mini
+label: Изображение
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      embed_video: embed_video
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: embed_video
+field_type: entity_reference

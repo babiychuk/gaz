@@ -1,0 +1,9 @@
+.more-link {
+  text-align: center;
+  margin: 1em;
+
+  a {
+    //@include button($c_white, $c_primary);
+    @include button-primary;
+  }
+}

@@ -1,0 +1,31 @@
+uuid: 845affdc-2d47-4a26-bf58-cb1b0c9acefa
+langcode: uk
+status: true
+dependencies:
+  config:
+    - system.menu.footer-about
+  module:
+    - menu_block
+  theme:
+    - uag
+id: footer_about
+theme: uag
+region: footer_col_1
+weight: 0
+provider: null
+plugin: 'menu_block:footer-about'
+settings:
+  id: 'system_menu_block:footer-about'
+  label: '<a href="https://ru.stage.ukravtonomgaz.ua/o-kompanii">О компании</a>'
+  provider: menu_block
+  label_display: visible
+  level: 1
+  depth: 1
+  expand: 0
+  parent: 'footer-about:menu_link_content:d967fa77-f8e9-4637-bb0d-a4cfd74b786f'
+  suggestion: footer_about
+  label_type: fixed_parent
+  label_link: 1
+  follow: 0
+  follow_parent: active
+visibility: {  }

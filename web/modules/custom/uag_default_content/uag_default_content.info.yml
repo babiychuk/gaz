@@ -1,0 +1,10 @@
+name: 'UAG default content'
+type: module
+description: 'My Awesome Module'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - default_content
+default_content:
+  block_content:
+    - 2b97cb66-bf95-4d14-8009-dfeb9e667a58

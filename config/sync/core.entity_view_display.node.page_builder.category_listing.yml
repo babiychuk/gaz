@@ -1,0 +1,65 @@
+uuid: 72764e6c-3b95-4587-b0e1-ef10a8128016
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.category_listing
+    - field.field.node.page_builder.field_category
+    - field.field.node.page_builder.field_header_content
+    - field.field.node.page_builder.field_hero_background
+    - field.field.node.page_builder.field_image
+    - field.field.node.page_builder.field_image_media
+    - field.field.node.page_builder.field_metatags
+    - field.field.node.page_builder.field_paragraphs
+    - field.field.node.page_builder.field_short_description
+    - node.type.page_builder
+  module:
+    - svg_image
+    - text
+    - user
+id: node.page_builder.category_listing
+targetEntityType: node
+bundle: page_builder
+mode: category_listing
+content:
+  field_image:
+    type: image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: content
+      svg_render_as_image: '1'
+      svg_attributes:
+        width: ''
+        height: ''
+    third_party_settings: {  }
+  field_image_media:
+    type: entity_reference_entity_view
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  field_short_description:
+    type: text_default
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_category: true
+  field_header_content: true
+  field_hero_background: true
+  field_metatags: true
+  field_paragraphs: true
+  langcode: true

@@ -1,0 +1,24 @@
+.view-front-services {
+  > .view-content {
+    display: flex;
+    flex-flow: row;
+
+    > .views-row {
+      width: span(3);
+      margin-right: gutter();
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  > .more-link {
+    text-align: center;
+    margin: 1em;
+
+    a {
+      @include button($c_primary, $c_white);
+    }
+  }
+}

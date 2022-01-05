@@ -1,0 +1,8 @@
+uuid: 24ddd17c-0635-4f59-aa39-a3dd2f1d1577
+langcode: ru
+status: true
+dependencies: {  }
+id: magazin
+label: Магазин
+description: ''
+locked: false

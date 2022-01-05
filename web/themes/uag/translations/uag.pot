@@ -1,0 +1,101 @@
+# $Id$
+#
+# LANGUAGE translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  uag.theme: n/a
+#  uag.breakpoints.yml: n/a
+#  uag.info.yml: n/a
+#  assets/js/jquery.ui.dialog.defaults.js: n/a
+#  js/jquery.ui.dialog.defaults.js: n/a
+#  templates/commerce-order-receipt.html.twig: n/a
+#  templates/content/node--category-listing.html.twig: n/a
+#  templates/content/node--news--front-page.html.twig: n/a
+#  templates/content/node--service--front-page.html.twig: n/a
+#  templates/layout/html.html.twig: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2018-10-29 13:39+0200\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: uag.theme:309
+msgid "Debug"
+msgstr ""
+
+#: uag.theme:311
+msgid "Adds debug functions."
+msgstr ""
+
+#: uag.breakpoints.yml:0
+msgid "mobile"
+msgstr ""
+
+#: uag.breakpoints.yml:0
+msgid "small"
+msgstr ""
+
+#: uag.breakpoints.yml:0
+msgid "medium"
+msgstr ""
+
+#: uag.breakpoints.yml:0
+msgid "large"
+msgstr ""
+
+#: uag.info.yml:0
+msgid "uag"
+msgstr ""
+
+#: uag.info.yml:0
+msgid "Ukravtonomgaz theme"
+msgstr ""
+
+#: uag.info.yml:0
+msgid "Other"
+msgstr ""
+
+#: assets/js/jquery.ui.dialog.defaults.js:0 js/jquery.ui.dialog.defaults.js:0
+msgid "Close"
+msgstr ""
+
+#: templates/commerce-order-receipt.html.twig:39
+msgid "Order Confirmation"
+msgstr ""
+
+#: templates/commerce-order-receipt.html.twig:43
+msgid "Order #@number details:"
+msgstr ""
+
+#: templates/commerce-order-receipt.html.twig:74
+msgid "Shipping Information"
+msgstr ""
+
+#: templates/commerce-order-receipt.html.twig:77
+msgid "Billing Information"
+msgstr ""
+
+#: templates/commerce-order-receipt.html.twig:98
+msgid "Payment Method"
+msgstr ""
+
+#: templates/commerce-order-receipt.html.twig:140
+msgid "Thanks for ordering, our manager will call you soon. <br>\n                Our telephone number is @phone."
+msgstr ""
+
+#: templates/content/node--category-listing.html.twig:115 templates/content/node--news--front-page.html.twig:100 templates/content/node--service--front-page.html.twig:98
+msgid "Read more"
+msgstr ""
+
+#: templates/layout/html.html.twig:48
+msgid "Skip to main content"
+msgstr ""
+

@@ -1,0 +1,70 @@
+uuid: 2ff5bc1b-b1c5-42f5-bc49-2fcf8441bdd8
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.container.field_background
+    - field.field.paragraph.container.field_color_scheme
+    - field.field.paragraph.container.field_content
+    - field.field.paragraph.container.field_content_display_mode
+    - field.field.paragraph.container.field_css_class
+    - field.field.paragraph.container.field_css_id
+    - field.field.paragraph.container.field_fullwidth
+    - field.field.paragraph.container.field_link
+    - field.field.paragraph.container.field_style
+    - field.field.paragraph.container.field_title
+    - paragraphs.paragraphs_type.container
+  module:
+    - entity_reference_display
+    - link
+id: paragraph.container.default
+targetEntityType: paragraph
+bundle: container
+mode: default
+content:
+  field_background:
+    type: entity_reference_entity_view
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  field_content:
+    type: entity_reference_display_default
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+      display_field: null
+    third_party_settings: {  }
+    region: content
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_color_scheme: true
+  field_content_display_mode: true
+  field_css_class: true
+  field_css_id: true
+  field_fullwidth: true
+  field_style: true

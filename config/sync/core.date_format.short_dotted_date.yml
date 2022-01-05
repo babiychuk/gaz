@@ -1,0 +1,8 @@
+uuid: 502947ba-4310-4608-90d8-6ef6fcf8b35a
+langcode: und
+status: true
+dependencies: {  }
+id: short_dotted_date
+label: 'Short dotted date'
+locked: false
+pattern: d.m.Y

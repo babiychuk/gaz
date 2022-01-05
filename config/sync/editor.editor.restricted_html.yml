@@ -1,0 +1,51 @@
+uuid: 0cec31ba-95d1-46d7-84cc-84874e3554c1
+langcode: ru
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+  module:
+    - ckeditor
+format: restricted_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Форматирование
+          items:
+            - Bold
+            - Italic
+        -
+          name: Ссылки
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Списки
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalImage
+        -
+          name: Инструменты
+          items:
+            - Source
+  plugins:
+    stylescombo:
+      styles: ''
+    language:
+      language_list: un
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

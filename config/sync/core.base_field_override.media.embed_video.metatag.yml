@@ -1,0 +1,18 @@
+uuid: 56b69188-f1c7-4635-8892-6f2d6b44f46b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - media.type.embed_video
+id: media.embed_video.metatag
+field_name: metatag
+entity_type: media
+bundle: embed_video
+label: Мета-теги
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

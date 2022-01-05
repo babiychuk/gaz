@@ -1,0 +1,32 @@
+uuid: 3403ce18-778f-4355-8be0-a2d86ac5ee24
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content_display_mode
+    - paragraphs.paragraphs_type.container
+  module:
+    - entity_reference_display
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.container.field_content_display_mode
+field_name: field_content_display_mode
+entity_type: paragraph
+bundle: container
+label: 'Режим отображения'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  exclude:
+    default: default
+    about_uag: about_uag
+    dark_gray_card: dark_gray_card
+    white_card: white_card
+    white_card_shadow: white_card_shadow
+  negate: 1
+field_type: entity_reference_display

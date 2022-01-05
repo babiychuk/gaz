@@ -1,0 +1,20 @@
+uuid: fc4ad340-1b0b-43a9-81ea-7dae8d3a1c16
+langcode: uk
+status: true
+dependencies:
+  config:
+    - media.type.embed_video
+  module:
+    - path
+id: media.embed_video.path
+field_name: path
+entity_type: media
+bundle: embed_video
+label: URL-синонім
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

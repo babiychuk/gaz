@@ -1,0 +1,51 @@
+.paragraph--type--card-mini.paragraph--view-mode--supply-schemes {
+  .field--name-field-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
+    margin: 0 auto;
+    background-color: $c_white;
+
+    svg {
+      width: 70%;
+      height: 70%;
+      margin: 15%;
+
+      path, .st0 {
+        fill: $c_primary;
+      }
+    }
+
+    &:hover {
+      background-color: $c_primary;
+
+      svg {
+        path, .st0 {
+          fill: $c_white;
+        }
+      }
+    }
+  }
+
+  .field--name-field-title {
+    font-size: 1em;
+  }
+
+  &.linked {
+    .field--name-field-image .contextual {
+      //TODO: Media rendered inside link =(
+      display: none;
+      //top: auto;
+      //bottom: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        color: $c_primary;
+      }
+    }
+  }
+}

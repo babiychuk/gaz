@@ -1,0 +1,29 @@
+uuid: 04145deb-fab3-4929-a3ce-5ecf44a80da0
+langcode: uk
+status: true
+dependencies:
+  config:
+    - system.menu.service
+  module:
+    - menu_block
+  theme:
+    - uag
+id: '777'
+theme: uag
+region: footer_col_4
+weight: 1
+provider: null
+plugin: 'menu_block:service'
+settings:
+  id: 'system_menu_block:service'
+  label: '<a href="https://ru.stage.ukravtonomgaz.ua/uslugi-ukravtonomgaz">Услуги</a>'
+  provider: menu_block
+  label_display: visible
+  level: 1
+  depth: 1
+  expand: 0
+  parent: 'service:menu_link_content:31cf7223-fcef-4315-8a3c-d674d673eca4'
+  suggestion: service
+  label_type: fixed_parent
+  label_link: 1
+visibility: {  }

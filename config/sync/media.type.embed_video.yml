@@ -1,0 +1,15 @@
+uuid: b6761fa6-60d4-4c31-af26-0bd34844a87b
+langcode: ru
+status: true
+dependencies:
+  module:
+    - video_embed_media
+id: embed_video
+label: 'Embed video'
+description: 'Youtube, Vimeo, etc.'
+source: video_embed_field
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_video_embed_field
+field_map: {  }

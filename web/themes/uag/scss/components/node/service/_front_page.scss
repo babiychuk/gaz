@@ -1,0 +1,34 @@
+.node.node--type-service.node--view-mode-front-page {
+  height: 100%;
+  overflow: hidden;
+  background-color: $c_white;
+  color: $c_light_gray;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  padding-bottom: 50px;
+
+  .field--name-field-image {
+    min-height: 10em;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  h3 {
+    order: 0;
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2em 0 1em;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  .node__link {
+    margin-top: auto;
+  }
+}

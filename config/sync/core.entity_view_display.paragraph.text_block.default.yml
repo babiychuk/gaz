@@ -1,0 +1,36 @@
+uuid: 7cf300ed-4e65-4cca-b267-f9c28f531ee8
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_block.field_description
+    - field.field.paragraph.text_block.field_link
+    - paragraphs.paragraphs_type.text_block
+  module:
+    - link
+    - text
+id: paragraph.text_block.default
+targetEntityType: paragraph
+bundle: text_block
+mode: default
+content:
+  field_description:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

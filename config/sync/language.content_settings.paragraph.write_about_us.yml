@@ -1,0 +1,18 @@
+uuid: f3a6ba25-0d34-46e4-9236-a4620aee4210
+langcode: ru
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.write_about_us
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.write_about_us
+target_entity_type_id: paragraph
+target_bundle: write_about_us
+default_langcode: current_interface
+language_alterable: false

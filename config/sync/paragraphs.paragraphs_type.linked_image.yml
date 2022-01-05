@@ -1,0 +1,14 @@
+uuid: 8ff7eb75-4225-499c-8858-3418e772323e
+langcode: ru
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: linked_image
+label: 'Изображение со ссылкой'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

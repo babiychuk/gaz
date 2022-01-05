@@ -1,0 +1,17 @@
+.view-category-listing .views-row {
+  > .node--view-mode-category-listing {
+    background-color: $c_primary;
+    color: white;
+  }
+
+  &:nth-child(2n) {
+    > .node--view-mode-category-listing {
+      background-color: transparent;
+      color: inherit;
+
+      .node__content .node__col_second {
+        order: 0;
+      }
+    }
+  }
+}

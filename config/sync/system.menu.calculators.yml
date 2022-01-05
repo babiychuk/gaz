@@ -1,0 +1,8 @@
+uuid: c930c22b-13fb-481e-937c-097240eb675c
+langcode: und
+status: true
+dependencies: {  }
+id: calculators
+label: 'Схеми газопостачання'
+description: ''
+locked: false

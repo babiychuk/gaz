@@ -1,0 +1,45 @@
+uuid: dce8083c-a9e9-41bc-badc-601f50bfe34d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.category_listing
+    - field.field.node.page.body
+    - field.field.node.page.field_category
+    - field.field.node.page.field_hero_background
+    - field.field.node.page.field_image
+    - field.field.node.page.field_metatags
+    - image.style.large
+    - node.type.page
+  module:
+    - svg_image
+    - user
+id: node.page.category_listing
+targetEntityType: node
+bundle: page
+mode: category_listing
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: large
+      image_link: content
+      svg_render_as_image: '1'
+      svg_attributes:
+        width: ''
+        height: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_category: true
+  field_hero_background: true
+  field_metatags: true
+  langcode: true

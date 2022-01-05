@@ -1,0 +1,25 @@
+uuid: 3846d63f-6f39-4724-9555-6a944ba1f1f9
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.header_node_content
+  module:
+    - views
+  theme:
+    - uag
+id: header_node_content
+theme: uag
+region: hero
+weight: 0
+provider: null
+plugin: 'views_block:header_node_content-block_1'
+settings:
+  id: 'views_block:header_node_content-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility: {  }

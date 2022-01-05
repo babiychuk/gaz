@@ -1,0 +1,10 @@
+uuid: 233cb818-8b7a-40c8-adf5-ac4ee59f1f6f
+langcode: uk
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.about_uag
+label: 'About uag'
+targetEntityType: paragraph
+cache: true

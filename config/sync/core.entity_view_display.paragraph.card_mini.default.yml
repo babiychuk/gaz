@@ -1,0 +1,57 @@
+uuid: 42981a9f-bc9b-4c69-a3cb-c763858a389f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.card_mini.field_description
+    - field.field.paragraph.card_mini.field_image
+    - field.field.paragraph.card_mini.field_link
+    - field.field.paragraph.card_mini.field_style
+    - field.field.paragraph.card_mini.field_title
+    - paragraphs.paragraphs_type.card_mini
+  module:
+    - link
+    - text
+id: paragraph.card_mini.default
+targetEntityType: paragraph
+bundle: card_mini
+mode: default
+content:
+  field_description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_style: true

@@ -1,0 +1,30 @@
+uuid: 32912b36-d493-4fe7-a94a-03fb5b85466d
+langcode: en
+status: true
+dependencies: {  }
+id: gaz_migrate_node_images_migration_step2
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: media
+label: 'Node images migration Mapping'
+source:
+  plugin: 'content_entity:node'
+  bundle: page_builder
+  include_translations: true
+process:
+  nid: nid
+  type:
+    plugin: default_value
+    default_value: page_builder
+  field_image_media:
+    plugin: file_id_lookup
+    source: field_image
+    migration: gaz_migrate_node_images_migration_step1
+    no_stub: true
+destination:
+  plugin: 'entity:node'
+migration_dependencies:
+  required:
+    - gaz_migrate_node_images_migration_step1

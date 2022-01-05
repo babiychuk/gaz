@@ -1,0 +1,22 @@
+uuid: be230e37-30f1-40f6-b759-dc5b9ca8e675
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - uag
+_core:
+  default_config_hash: 5MNdk3fpMKx_xxBTcz2T11DL4XEU1H5SgHl8BsYdFsA
+id: uag_messages
+theme: uag
+region: preface
+weight: -11
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Сообщения статуса'
+  provider: system
+  label_display: '0'
+visibility: {  }

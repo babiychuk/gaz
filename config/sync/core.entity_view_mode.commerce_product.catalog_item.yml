@@ -1,0 +1,10 @@
+uuid: 81b1af8a-ffe3-4f9d-ae96-fbf678985865
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.catalog_item
+label: 'Catalog item'
+targetEntityType: commerce_product
+cache: true

@@ -1,0 +1,31 @@
+uuid: e68ae39c-1b16-414f-bf73-8472bad6eaed
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.media.embed_video.field_media_video_embed_field
+    - media.type.embed_video
+  module:
+    - video_embed_field
+id: media.embed_video.default
+targetEntityType: media
+bundle: embed_video
+mode: default
+content:
+  field_media_video_embed_field:
+    weight: 0
+    label: hidden
+    settings:
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: false
+    third_party_settings: {  }
+    type: video_embed_field_video
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

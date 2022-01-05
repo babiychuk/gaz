@@ -1,0 +1,352 @@
+<?php
+/**
+ * Use language code for the language switcher
+ *
+ * @param $variables
+ */
+function uag_preprocess_links__language_block(&$variables) {
+  foreach ($variables['links'] as $i => $link) {
+    // @var \Drupal\language\Entity\ConfigurableLanguage $linkLanguage
+    $linkLanguage = $link['link']['#options']['language'];
+    $variables['links'][$i]['link']['#title'] = $linkLanguage->get('id');
+  }
+}
+
+
+function uag_theme_suggestions_paragraph_alter(array &$suggestions, array $variables) {
+  /** @var \Drupal\paragraphs\ParagraphInterface $paragraph */
+  $paragraph = $variables['elements']['#paragraph'];
+  $bundle = $paragraph->bundle();
+  $view_mode = $variables['elements']['#view_mode'];
+  if ($paragraph->hasField('field_style')) {
+    $styles = $paragraph->get('field_style')->getValue();
+    foreach ($styles as $style) {
+      $style_value = $style['value'];
+      foreach ($suggestions as $suggestion) {
+
+        $newstr = substr_replace($suggestion, '__style_' . $style_value, strpos($suggestion, '__'), 0);
+        array_splice(
+          $suggestions,
+          array_search($suggestion, $suggestions),
+          0,
+          $newstr
+        );
+      }
+    }
+  }
+}
+
+function uag_preprocess_paragraph(&$variables) {
+  /** @var \Drupal\paragraphs\ParagraphInterface $paragraph */
+  $paragraph = $variables['paragraph'];
+  $view_mode = $variables['view_mode'];
+
+  if ($paragraph->hasField('field_style')) {
+    $styles = $paragraph->get('field_style')->getValue();
+    foreach ($styles as $style) {
+      $style_value = $style['value'];
+      $variables['attributes']['class'][] = 'paragraph-style--' . $style_value;
+    }
+  }
+
+  if ($paragraph->hasField('field_fullwidth')) {
+    $field = $paragraph->get('field_fullwidth');
+    if (!$field->isEmpty() && $field->first()->getValue()['value']) {
+      $variables['attributes']['class'][] = 'paragraph-fullwidth';
+    }
+  }
+
+  if ($paragraph->hasField('field_background')) {
+    $field = $paragraph->get('field_background');
+    if (!$field->isEmpty() && $field->first()->getValue()) {
+      $variables['attributes']['class'][] = 'paragraph-has-background';
+    }
+  }
+
+  if ($paragraph->hasField('field_css_id')) {
+    $field_values = $paragraph->get('field_css_id')->getValue();
+    foreach ($field_values as $field_value) {
+      $variables['attributes']['id'] = $field_value['value'];
+    }
+  }
+
+  if ($paragraph->hasField('field_css_class')) {
+    $field_values = $paragraph->get('field_css_class')->getValue();
+    foreach ($field_values as $field_value) {
+      $variables['attributes']['id'] = $field_value['value'];
+    }
+  }
+
+  if ($paragraph->hasField('field_color_scheme')) {
+    $field_values = $paragraph->get('field_color_scheme')->getValue();
+    foreach ($field_values as $field_value) {
+      $variables['attributes']['class'][] = 'paragraph-color-scheme-' . $field_value['value'];
+    }
+  }
+
+  if ($paragraph->hasField('field_updown_direction')) {
+    $field_values = $paragraph->get('field_updown_direction')->getValue();
+    foreach ($field_values as $field_value) {
+      $variables['attributes']['class'][] = 'paragraph-updown-direction-' . $field_value['value'];
+    }
+  }
+
+  try {
+    $field = $paragraph->get('field_media_placement');
+    foreach ($field->getValue() as $field_value) {
+      $variables['attributes']['class'][] = 'media-placement-' . $field_value['value'];
+    }
+  } catch (InvalidArgumentException $e) {
+  }
+
+  $variables['language']  = \Drupal::languageManager()->getCurrentLanguage();
+
+  if ($paragraph->hasField('field_link')) {
+    $field = $paragraph->get('field_link');
+    try {
+      if (!$field->isEmpty() && $value = $field->first()->getValue()) {
+        $variables['more_url'] = \Drupal\Core\Url::fromUri($value['uri'], $value['options']);
+      }
+    } catch (\Drupal\Core\TypedData\Exception\MissingDataException $e) {
+    }
+  }
+}
+
+/**
+ * @param $variables
+ * @param $hook
+ *
+ * @throws \Drupal\Core\Entity\EntityMalformedException
+ */
+function uag_preprocess_field(&$variables, $hook) {
+  $field_name = $variables['element']['#field_name'];
+  $field_type = $variables['element']['#field_type'];
+  $entity_type = $variables['element']['#entity_type'];
+  $bundle = $variables['element']['#bundle'];
+  $view_mode = $variables['element']['#view_mode'];
+  /** @var \Drupal\Core\Entity\FieldableEntityInterface $entity */
+  $entity = $variables['element']['#object'];
+  if ($entity_type == 'paragraph' && $bundle == 'tabbed_cards' && $field_name == 'field_content') {
+    // https://a11y.nicolas-hoffmann.net/tabs/#step2
+
+    foreach ($variables['items'] as $key => $item) {
+      /** @var \Drupal\paragraphs\ParagraphInterface $paragraph */
+      $paragraph = $variables['items'][$key]['content']['#paragraph'];
+      $variables['items'][$key]['content']['#view_mode'] = 'tab_content';
+      $variables['items'][$key]['title'] = $variables['items'][$key]['content'];
+      $variables['items'][$key]['title']['#view_mode'] = 'tab_title';
+
+      $variables['items'][$key]['id'] = $paragraph->id();
+    }
+  }
+
+  if ($entity_type == 'node' && $field_name == 'field_image_media' && $view_mode == 'category_listing') {
+    $node_url = $entity->toUrl();
+    foreach ($variables['items'] as $key => $item) {
+      $variables['items'][$key]['content']['#pre_render'][] = '_uag_pre_render_linked_image_media';
+      $variables['items'][$key]['content']['#url'] = $node_url;
+    }
+  }
+}
+
+function uag_preprocess_html(&$variables) {
+  $is_debug = theme_get_setting('uag_debug');
+  if ($is_debug) {
+    $variables['uag_debug'] = true;
+    $variables['#attached']['library'][] = 'uag/debug';
+  }
+}
+
+/**
+ * @param $variables
+ *
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ */
+function uag_preprocess_page(&$variables) {
+  $em_media = \Drupal::entityTypeManager()->getStorage('media');
+
+  /** @var \Drupal\Core\Entity\EntityInterface $bg_media_holder */
+  $bg_media_holder = null;
+  /** @var \Drupal\media\Entity\Media $bg_media_entity */
+  $bg_media_entity = null;
+  /** @var \Drupal\node\NodeInterface $node */
+  if ($node = \Drupal::routeMatch()
+    ->getParameter('node')) {
+    if (is_string($node)) $node = \Drupal\node\Entity\Node::load((int) $node);
+    $bg_media_holder = $node;
+  } elseif ($term = \Drupal::routeMatch()
+    ->getParameter('taxonomy_term')) {
+    if (is_string($term)) $term = \Drupal\taxonomy\Entity\Term::load((int) $term);
+    $bg_media_holder = $term;
+  }
+
+  if ($bg_media_holder && $bg_media_holder->hasField('field_hero_background')) {
+    $field_values = $bg_media_holder->get('field_hero_background')->getValue();
+    if (!empty($field_values)) {
+      $bg_media_entity = $em_media->load($field_values[0]['target_id']);
+    } else {
+      if ($bg_media_holder->getEntityTypeId() == 'node' && $bg_media_holder->bundle() == 'news') {
+        $variables['hero_bg'] = file_create_url($variables['directory'] . '/assets/images/hero/news.jpg');
+      }
+    }
+  }
+
+  if ($bg_media_entity && $bg_media_entity->bundle() == 'image' && $bg_media_entity->hasField('field_media_image')) {
+    try {
+      /** @var \Drupal\file\Entity\File $image */
+      $image = $bg_media_entity->get('field_media_image')->first()->entity;
+      $uri = $image->getFileUri();
+      // $file = \Drupal::entityTypeManager()->getStorage('file');
+
+      $styled_image_url = \Drupal\image\Entity\ImageStyle::load('hero')->buildUrl($uri);
+      $variables['hero_bg'] = $styled_image_url;
+    } catch (\Drupal\Core\TypedData\Exception\MissingDataException $e) {
+    }
+  }
+
+  /** Attach modal library everywhere */
+  $vars['#attached']['library'][] =  'core/drupal.dialog.ajax';
+}
+
+function uag_preprocess_media(&$variables) {
+  $elements = $variables['elements'];
+  // /** @var \Drupal\media\MediaInterface $media */
+  // $media = $elements['#media'];
+}
+
+function uag_preprocess_commerce_product(&$variables) {
+  $elements = $variables['elements'];
+
+  $variables['attributes']['class'][] = 'product';
+  $variables['attributes']['class'][] = \Drupal\Component\Utility\Html::getClass('view-mode-'.$elements['#view_mode']) ;
+}
+
+function uag_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if (strpos($form_id, "commerce_order_item_add_to_cart_form") !== false) {
+    $form_storage = $form_state->getStorage();
+    if (isset($form_storage['view_mode'])) {
+      $view_mode = $form_storage['view_mode'];
+
+      if ($view_mode == 'front_slide') {
+        // $form['actions']['submit']['#type'] = 'button';
+        // $form['actions']['submit']['#attributes']['type'] = 'submit';
+        // $form['actions']['submit']['#attributes']['class'][] = 'reset-appearance';
+        // $form['actions']['submit']['#value'] = t('Add to cart');
+        $form['actions']['submit']['#icon'] = 'shopping-cart';
+        $form['actions']['submit']['#icon_position'] = 'after';
+      }
+    }
+  }
+}
+
+function uag_preprocess_input(&$variables) {
+    $element = $variables['element'];
+    switch ($element['#type']) {
+      case 'submit':
+        // unset($variables['attributes'])
+        $variables['children'] = $element['#value'];
+        break;
+    }
+
+    /*
+     * 'fontawesomeicon' => [
+          'variables' => [
+            'tag' => 'i',
+            'name' => NULL,
+            'style' => NULL,
+            'settings' => NULL,
+            'transforms' => NULL,
+            'mask' => NULL,
+          ],
+        ],
+     */
+    if (isset($element['#icon'])) {
+      $configurationSettings = \Drupal::config('fontawesome.settings');
+
+      // Attach the libraries as needed.
+      $fontawesomeLibraries = [];
+      if ($configurationSettings->get('method') == 'webfonts') {
+        // Webfonts method.
+        $fontawesomeLibraries[] = 'fontawesome/fontawesome.webfonts';
+      }
+      else {
+        // SVG method.
+        $fontawesomeLibraries[] = 'fontawesome/fontawesome.svg';
+
+        // Attach the shim file if needed.
+        if ($configurationSettings->get('use_shim')) {
+          $fontawesomeLibraries[] = 'fontawesome/fontawesome.svg.shim';
+        }
+      }
+
+      $variables['#attached']['library'] = $fontawesomeLibraries;
+      $variables['icon'] = [
+        '#theme' => 'fontawesomeicon',
+        '#tag' => $configurationSettings->get('tag'),
+        '#name' => 'fa-' . $element['#icon'],
+        '#style' => 'fas',
+      ];
+
+      if (isset($element['#icon_position']) && in_array($element['#icon_position'], [
+          'before',
+          'after'
+        ])) {
+        $variables['icon_position'] = $element['#icon_position'];
+      } else {
+        $variables['icon_position'] = 'before';
+      }
+    }
+}
+
+function uag_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface &$form_state, $form_id = NULL) {
+  if (isset($form_id)) {
+    return;
+  }
+
+  $form['uag_debug'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Debug'),
+    '#default_value' => theme_get_setting('uag_debug'),
+    '#description'   => t("Adds debug functions."),
+  );
+}
+
+function uag_preprocess_views_view(&$variables) {
+  if (isset($variables['more']) && isset($variables['more']['#title'])) {
+    $variables['more']['#title'] = \Drupal\Core\Render\Markup::create($variables['more']['#title'] . '&nbsp;<i class="fa fa-eye"></i>');
+  }
+}
+
+/**
+ * @param $libraries
+ * @param $extension
+ * Setup jQuery ui dialogs
+ */
+function uag_library_info_alter(&$libraries, $extension) {
+  if ($extension == 'core') {
+    $js_path = '/' . drupal_get_path('theme', 'uag') . '/assets/js/jquery.ui.dialog.defaults.js';
+    $libraries['jquery.ui.dialog']['js'][$js_path] = [];
+  }
+}
+
+function uag_preprocess_node(&$vars) {
+  $view_mode = $vars['view_mode'];
+  /** @var \Drupal\node\NodeInterface $node */
+  $node = $vars['elements']['#node'];
+  /*
+  if ($view_mode == 'category_listing') {
+    if ($node->hasField('field_image_media')) {
+    }
+  }
+  */
+}
+
+function _uag_pre_render_linked_image_media($element) {
+  if (isset($element['field_media_image']) && isset($element['#url'])) {
+    foreach (\Drupal\Core\Render\Element::children($element['field_media_image']) as $key => $item) {
+      $element['field_media_image'][$key]['#url'] = $element['#url'];
+    }
+  }
+  return $element;
+}

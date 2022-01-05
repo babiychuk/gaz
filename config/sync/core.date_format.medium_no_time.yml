@@ -1,0 +1,10 @@
+uuid: 9d8ca3d1-afda-4715-8167-4dc68871c42f
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: nzL5d024NjXIX_8TlT6uFAu973lmfkmHklJC-2i9rAE
+id: medium_no_time
+label: 'Средняя дата без времени'
+locked: false
+pattern: 'D, m/d/Y'

@@ -1,0 +1,27 @@
+uuid: 48640f23-be5b-4a0c-8e3d-ae46501a426c
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - uag
+_core:
+  default_config_hash: 8yptDf6WrXxeyevUz4nP5vfr7BtxQqCBMninhV2IJ1g
+id: uag_page_title
+theme: uag
+region: hero
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Заголовок страницы'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

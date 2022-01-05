@@ -1,0 +1,27 @@
+uuid: 8740ee7b-7aa1-474a-892a-8e072bc7818a
+langcode: ru
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_updown_direction
+field_name: field_updown_direction
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: up
+      label: вверх
+    -
+      value: down
+      label: вниз
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

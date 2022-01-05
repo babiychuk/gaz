@@ -1,0 +1,14 @@
+uuid: e640b5bb-0766-45ce-a4a8-09ee6dce5afa
+langcode: ru
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: supply_schemes_block
+label: 'Схемы газоснабжения'
+icon_uuid: null
+description: 'Кастомный блок, т.к.'
+behavior_plugins: {  }

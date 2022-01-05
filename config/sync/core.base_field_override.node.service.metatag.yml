@@ -1,0 +1,18 @@
+uuid: 529a300e-fc32-4fd8-a1e3-80fefd63ef28
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.service
+id: node.service.metatag
+field_name: metatag
+entity_type: node
+bundle: service
+label: Мета-теги
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

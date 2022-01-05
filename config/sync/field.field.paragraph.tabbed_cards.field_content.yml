@@ -1,0 +1,61 @@
+uuid: 89138be9-ac43-409d-ae99-cf984b06437d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.tab_card
+    - paragraphs.paragraphs_type.tabbed_cards
+  module:
+    - entity_reference_revisions
+id: paragraph.tabbed_cards.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: tabbed_cards
+label: Tabs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      tab_card: tab_card
+    target_bundles_drag_drop:
+      tabbed_cards:
+        weight: 11
+        enabled: false
+      tab_card:
+        enabled: true
+        weight: 12
+      card_mini:
+        weight: 12
+        enabled: false
+      container:
+        weight: 13
+        enabled: false
+      from_library:
+        weight: 14
+        enabled: false
+      linked_image:
+        weight: 15
+        enabled: false
+      media:
+        weight: 16
+        enabled: false
+      supply_schemes_block:
+        weight: 17
+        enabled: false
+      text_block:
+        weight: 18
+        enabled: false
+      view:
+        weight: 19
+        enabled: false
+      write_about_us:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

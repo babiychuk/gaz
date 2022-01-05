@@ -1,0 +1,31 @@
+.node--view-mode-category-listing {
+  .node__content {
+    display: flex;
+    flex-flow: row;
+
+    .node__col_first,
+    .node__col_second {
+      flex: 1;
+      padding: gutter();
+    }
+
+    .node__col_first {
+      order: 1;
+    }
+
+    .node__col_second {
+      order: 2;
+    }
+  }
+
+  h2 a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .field--name-field-image-media {
+    a img {
+      display: block;
+    }
+  }
+}

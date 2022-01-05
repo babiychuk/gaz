@@ -1,0 +1,27 @@
+uuid: a3871283-03a9-435b-8ac8-ae8457585102
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.page_builder
+  module:
+    - metatag
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.page_builder.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: page_builder
+label: Metatags
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag
